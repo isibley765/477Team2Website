@@ -1,85 +1,243 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE HTML>
 <!--
-Name: Boilerplate
-Version: v1.3
-Last Updated: 4/24/2013
-Author: George Hadley
-License: Released for free under a Creative Commons Attribution 2.5 License
-
-This website was based upon a number of source materials, which are elaborated upon in credits.txt
-
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<html>
+	<head>
+		<title>ECE 477 Team 2</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets.css/mdb.min.css" />
+	</head>
+	<body>
 
-<!--Reconfigurable base tag; used to modify the site root location for root-relative links-->
-<!-- Python SimpleHTTPServer Testing -->
-<!--<base href="/http://localhost:8000/" />-->
-<!-- ECE477 preview URL -->
-<!--<base href="/https://engineering.purdue.edu/ece477/preview/" />-->
-<!-- ECE477 final URL -->
-<!--<base href="/https://engineering.purdue.edu/ece477/" />-->
+		<!-- Header -->
+			<header id="header" class="alt">
+				<div class="logo"><a href="https://engineering.purdue.edu/ece477/">ECE 477 <span> Team 2</span></a></div>
+				<a href="#menu">Menu</a>
+			</header>
 
-<!--Content-->
-<title>ECE477 Homepage</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<meta name="author" content="George Hadley">
-<meta name = "format-detection" content = "telephone=no" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#one"> Team </a></li>
+					<li><a href="documents/documents.html">Documents</a></li>
+					<li><a href="https://github.com">Source</a></li>
+					<li><a href="media.html">Media</a></li>
+					<li><a href="contacts.html">Contact</a></li>
+					<li><a href="https://engineering.purdue.edu/ece477/">ECE477</a></li>
+					<!-- <li><a href="generic.html">Generic</a></li> -->
+					<!-- <li><a href="elements.html">Elements</a></li> -->
+				</ul>
+			</nav>
 
-<!--CSS-->
-<link rel="stylesheet" href="css/default.css" type="text/css" media="all" />
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/content.css">
-<!--[if IE 6]>
-<link href="/default_ie6.css" rel="stylesheet" type="text/css" />
-<![endif]-->
+		<!-- Banner -->
+			<section class="banner full">
+				<article>
+					<!-- image url: https://www.wallpapersbrowse.com/wallpaper/93461 -->
+					<img src="images/circuit1.jpg" alt="" />
+					<div class="inner">
+						<header>
+						<!--	<p>A free responsive web site template by <a href="https://templated.co">TEMPLATED</a></p> -->
+							<p style="font-size: 20px"> ECE 477 Team 2 presents </p>
+							<h2 style="font-size: 50px">The Guard DAWG System</h2>
+						</header>
+					</div>
+				</article>
+				<article>
+					<!-- image url: http://mcgilvra.com/wp-content/uploads/2016/12/circuit-board-wallpaper-14-1.jpg-->
+					<img src="images/circuit4.jpg" alt="" />
+					<div class="inner">
+						<header>
+							<p style="font-size: 30px; color: white">Beautiful design of your home security system </p>
+						</header>
+					</div>
+				</article>
+				<!--
+				<article>
+					<img src="images/slide03.jpg"  alt="" />
+					<div class="inner">
+						<header>
+							<p>Sed cursus aliuam veroeros lorem ipsum nullam</p>
+							<h2>Tempus dolor</h2>
+						</header>
+					</div>
+				</article>
+				<article>
+					<img src="images/slide04.jpg"  alt="" />
+					<div class="inner">
+						<header>
+							<p>Adipiscing lorem ipsum feugiat sed phasellus consequat</p>
+							<h2>Etiam feugiat</h2>
+						</header>
+					</div>
+				</article>
+				<article>
+					<img src="images/slide05.jpg"  alt="" />
+					<div class="inner">
+						<header>
+							<p>Ipsum dolor sed magna veroeros lorem ipsum</p>
+							<h2>Lorem adipiscing</h2>
+						</header>
+					</div>
+				</article> -->
+			</section>
 
-</head>
-<body>
-<div id="wrapper_site">
-    <div id="wrapper_page">
-		<!-- Instantiate global site header.-->
-		<div id="header"></div>
-		<!-- Instantiate site global navigation bar.-->
-		<div id="menu"></div>
-		<!-- Instantiate slideshow module. All slideshow images should be 1100px x 500px and stored in ./img/slideshow-->
-		<div id="slideshow"></div>
-		<!-- Instantiate main page content. All page content should be added to about.html -->
-		<div id="content">
-            <h2>Project Overview:</h2> This project implements a smart-lock system, which provides the user with three ways to gain access to the door. Firstly, there will be a camera which, when activated, will capture the face of the user. The information is processed on a Raspberry Pi, and if the number of images matched reach a certain threshold, the Pi sends an ACK/NAK signal to the microcontroller, which will activate the motor to unlock the door. In the event an unauthorized user wants to gain access to the lock, there is a number pad that can give access to the user. If other two methods are unsuccessful, we have decided to implement a mechanical override using a physical key. The reason we decided to implement this is that we needed a way to gain access regardless of the state of the electronics.
+		<!-- One -->
+			<section id="one" class="wrapper style2">
+				<div class="inner">
+					<div class="grid-style">
 
-            <h2>Project Specific Success Criteria:</h2>
-                <ol>
-                    <li>PSSC #1: An ability to read video frames from an embedded camera at 4 frames per second. </li>
-                    <li>PSSC #2: An ability to receive a password from a numeric keypad. </li>
-                    <li>PSSC #3: An ability to communicate through I2C to receive user verification. </li>
-                    <li>PSSC #4: An ability to interface with a motor driver IC. </li>
-                    <li>PSSC #5: An ability to process image data to recognize a registered face. </li>
-                </ol>
-        </div>
-		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
-		<div id="footer"></div>
-	</div>
-</div>
+						<!-- Evan Miller -->
+						<div>
+							<div class="box">
+								<div class="image fit">
+									<img src="images/team/Evan_Miller.jpg" alt="" />
+								</div>
+								<div class="content">
+									<header class="align-center">
+										<p>Team Leader</p>
+										<h2>Evan Miller</h2>
+									</header>
+									<p style="height: 250px"> Evan Miller has had the opportunity to work with various engineering teams through internships and understands how critical communication is to a successful project. As the team leader he can help make sure that the team is organized and delivering on time. Additionally his experience with embedded hardware and software engineering gained through coursework will allow him to help other members of the team tackle challenging problems along the way.</p>
+									<footer class="align-center">
+										<a href="progress/progress1.html" class="button alt">Learn More</a>
+									</footer>
+								</div>
+							</div>
+						</div>
 
-<!--JS-->
-<script src="js/jquery.js"></script>
-<script src="js/jquery-migrate-1.1.1.js"></script>
+						<!-- Yash Nain -->
+						<div>
+							<div class="box">
+								<div class="image fit">
+									<img src="images/team/Yash_Nain.jpg" alt="" />
+								</div>
+								<div class="content">
+									<header class="align-center">
+										<p>Hardware Engineer</p>
+										<h2>Yash Nain</h2>
+									</header>
+									<p style="height: 250px"> Yash Nain has experience with designing and implementing embedded hardware. He is able to use several PCB CAD softwares, is familiar with several families of microcontroller, and is able to design simple power electronics. In addition, he has gained the requisite software experience required for this project through ECE 570, as well as other classes, projects, and internships. </p>
+									<footer class="align-center">
+										<a href="progress/progress2.html" class="button alt">Learn More</a>
+									</footer>
+								</div>
+							</div>
+						</div>
+
+						<!-- Ian Sibley -->
+						<div>
+							<div class="box">
+								<div class="image fit">
+									<img src="images/team/Ian_Sibley.jpg" alt="" />
+								</div>
+								<div class="content">
+									<header class="align-center">
+										<p>Software Engineer</p>
+										<h2>Ian Sibley</h2>
+									</header>
+									<p style="height: 250px"> Ian Sibley has been an active member of IEEE for 3 years now, and is the current Chair for Software Saturdays and one of the Co-Software Leads for IEEE ROV.
+            He'll be graduating in May 2019, and has accepted a position as a Software Engineer in Cincinnati with PCMS Datafit.
+            When he actually has free time, he enjoys swimming and getting active outside, as well as hanging out with friends, gaming online with his uncle and brother, and reading a good book. </p>
+									<footer class="align-center">
+										<a href="progress/progress3.html" class="button alt">Learn More</a>
+									</footer>
+								</div>
+							</div>
+						</div>
+
+						<!-- Viktoryia Zhuleva -->
+						<div>
+							<div class="box">
+								<div class="image fit">
+									<img src="images/team/Viktoryia_Zhuleva.jpg" alt="" />
+								</div>
+								<div class="content">
+									<header class="align-center">
+										<p>Systems Engineer</p>
+										<h2>Viktoryia Zhuleva</h2>
+									</header>
+									<p style="height: 250px"> Viktoryia Zhuleva had had significant practical experience in working with embedded systems and I/O system interfacing in her Embedded Systems and Microcontroller System Design courses. Her background makes her well-qualified for Systems Engineer position for the team, working on tasks such as microcontroller I/O integration, interfacing and hardware communication.</p>
+									<footer class="align-center">
+										<a href="progress/progress4.html" class="button alt">Learn More</a>
+									</footer>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<h2>Gallery</h2>
+						<p></p>
+					</header>
+				</div>
+			</section>
+
+		<!-- Three -->
+			<section id="three" class="wrapper style2">
+				<div class="inner">
+					<header class="align-center">
+					<!--	<h2> Meet the Team </h2>
+						<p class="special"></p> -->
+					</header>
+					<div class="gallery">
+						<div>
+							<div class="image fit">
+								<a href="#"><img src="images/pic01.jpg" alt="" /></a>
+							</div>
+						</div>
+						<div>
+							<div class="image fit">
+								<a href="#"><img src="images/pic02.jpg" alt="" /></a>
+							</div>
+						</div>
+						<div>
+							<div class="image fit">
+								<a href="#"><img src="images/pic03.jpg" alt="" /></a>
+							</div>
+						</div>
+						<div>
+							<div class="image fit">
+								<a href="#"><img src="images/pic04.jpg" alt="" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
 
-<script type="text/javascript">
-$(document).ready(function() {
-    $("#header").load("header.html");
-	$("#menu").load("navbar.html");
-	$("#slideshow").load("slideshow.html");
-	//$("#content").load("about.html");
-	$("#footer").load("footer.html");
-});
-</script>
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Untitled. All rights reserved.
+				</div>
+			</footer>
 
-</body>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
