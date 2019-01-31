@@ -37,7 +37,6 @@
 				<div class="inner">
 					<header class="align-center">
 						<p style="font-size: 20px">Software Engineer</p>
-						<h2  style="font-size: 40px; margin: 0;">Ian Sibley's</h2>
 						<h2 style="font-size: 50px">Progress Report</h2>
 					</header>
 				</div>
@@ -91,6 +90,29 @@
 								We also discussed ( I believe with Professor Thottethodi and (an)other TA(s) ) about changing our PSSC's from pointing at I2C to UART for communication with the Bluetooth module, as the bluetooth module found in the lab to use did not have I2C on its board. </p>
 							<hr/>
 							<p> Update: all libraries installed to the Pi, once the camera is calebrated we'll be able to start initial software design tests. </p>
+						</div>
+
+						<div class="content">
+							<header class="align-left">
+								<h2><b>Week 4: </b></h2>
+								<h1><b>Date:</b> January 31, 2019 </h1>
+								<h1><b>Total hours:</b> 12 </h2>
+								<h1><b>Description of Design Effors: </b></h1>
+							</header>
+							<p> 
+								The cold kept us from having lab, but I was able to put a good amount of work in all the same to streaming the taken pictures from the Pi to a WiFi/Ethernet connected device.
+							</p>
+							<p> 
+								<span class="image left four-show">
+									<img class="four-single-image" src="../../media/images/piFrameCaptures/frame6.jpg" alt="Pi Frame Capture"/>
+									<img class="four-single-image" src="../../media/images/piFrameCaptures/frame2.jpg" alt="Pi Frame Capture"/>
+									<img class="four-single-image" src="../../media/images/piFrameCaptures/frame5.jpg" alt="Pi Frame Capture"/>
+									<img class="four-single-image" src="../../media/images/piFrameCaptures/frame8.jpg" alt="Pi Frame Capture"/>
+								</span>
+								The big challenge from here was working with the code to get something that's able to be pulled into an application program, rather than a one-off run file. The examples found online, including one that involved threading and was very efficient, were messy, used global variables everywhere, and was resistive to being turned into classes and functions. And when they were, the extra structure interfered with the threading enough that the best I could find was 2 frames per second, slower than what we decided was useful.
+								So I switched back to a synchronous/non-threaded approach, and was able to easily get a little over our targeted 4fps even from an of campus connection. There's a small amount of work that'll be done to pull it into an application (making and sustaining connections and camera priming, to reduce wait times), but that's only a short way off now. 
+							</p>
+							<p> The frames are sideways cause that was the easiest way to prop the camera up for now, we'll have it mounted in the end product correctly. </p>
 						</div>
 					</div>
 				</div>
