@@ -15,9 +15,6 @@
 
 		<!-- Header -->
 			<header id="header">
-				<!--
-					<div class="logo"><a href="index.html">Hielo <span>by TEMPLATED</span></a></div>
-				-->
 				<div class="logo"> <a href="mailto:isibley@purdue.edu?subject=[ECE477]">Ian Sibley</a> </div>
 				<a href="#menu">Menu</a>
 			</header>
@@ -32,8 +29,6 @@
 						<li><a href="../../media/media.html">Media</a></li>
 						<li><a href="../contacts.html">Contacts</a></li>
 						<li><a href="https://engineering.purdue.edu/ece477/">ECE477</a></li>
-						<!-- <li><a href="generic.html">Generic</a></li> -->
-						<!-- <li><a href="elements.html">Elements</a></li> -->
 					</ul>
 				</nav>
 
@@ -63,16 +58,61 @@
 							<p> I was in charge of configuring the web page, I spent an evening ironing it out and fixing reference errors that were built in, only allowing it to access template files and images. Our files and images are in our group 2 folders, not the template folders, so there were obvious reasons why that was undesireable.
 								We should be straightened out now, the eventual resolution is an easy fix if any remain. </p>
 						</div>
+
 						<div class="content">
 							<header class="align-left">
-								<h2><b> <span class="image right"><img src="../../media/images/pi_image.jpg" alt="blurry pi image"/></span>Week 2:</b></h2>
+								<span class="image right"><img src="../../media/images/pi_image.jpg" alt="blurry pi image"/></span>
+								<h2><b>Week 2: </b></h2>
 								<h1><b>Date:</b> January 18, 2019 </h1>
-								<h1><b>Total hours:</b> 14 </h2>
+								<h1><b>Total hours:</b> 20 </h2>
 								<h1><b>Description of Design Effors: </b></h1>
 							</header>
 							<p> In addition to contributing to the Assignment 2 document content and converting citations to IEEE format, efforts were made to acquire relevant materials available in lab to avoid purchasing every item. </p>
 							<p> Most elements of our project were available in lab, fortunately. Some work was done to try and acquire picture and video frame capture from the Raspberry Pi and the camera, and video and images were pulled successfully. Frame capture will be done in the near future. </p>
 							<p> As you can see, the image is also blurry, and this may be a concern for the facial recognition algorithm. Investigation in a USB camera alternative instead may be desireable. </p>
+						</div>
+
+						<div class="content">
+							<header class="align-left">
+								<h2><b>Week 3: </b></h2>
+								<h1><b>Date:</b> January 25, 2019 </h1>
+								<h1><b>Total hours:</b> 18 </h2>
+								<h1><b>Description of Design Effors: </b></h1>
+							</header>
+							<p> We took a closer look at the software FaceNet and its documentation to complete the Software Overview. Inspection shows little documentation on how to use the network from within an application, however, besides activating it in a terminal setting and then presumably parsing its output text. </p>
+							<p>
+								<span class="image left"><img src="../../media/images/pi_remote_accessible.png" alt="setup pi for remote access"/></span>
+								To this end, face_recognition is a library that prides itself in its ease of use and accuracy, though its install process may also potentially be touchy as well. Once installed, it is directly documented to show how images can be classified against a pretrained network, also for a 128 feature vector like FaceNet. Less reference is made for how this architecture is built or what it is based on, but we have the full potential to make the actual algorithm process a modular item, so that we can design with whichever module appears easiest in initial stages, and swap for the other if desired, treating it as a black box that takes in cropped face images and returns the feature vector. </p>
+							<p> It has also been brought to our attention that a PyPi module <a style="color: blue" href="https://github.com/ishwarsawale/facenet_recognition">facenet_recognition</a> has been made for FaceNet with the intent for user convenience like with face_recognition, though it seems to still rely largely from physical files and folders. This isn't altogether a disadvantage, and may prove to be a good compromise  </p>
+							<p> Finally, it was discovered that the Raspberry Pi was able to be seen and connected outside of lab, as long as access to either Purdue WiFi was available or a Purdue VPN was used at home. So, this has been taken to great effect for lengthy installs of OpenCV, Tensorflow, and currently DLIB, though there have been some minor issues with DLIB. We will be trying again over the coming weekend, and but otherwise may be limited to doing the face cropping on the server side of things. Most Pi progress has been investment in the lengthier installs this week, usually when they don't work without extra care. </p>
+							<p>
+								<span class="image right"><img src="../../media/images/installs_finally_worked.png" alt="installs finally worked"/></span>
+								We also discussed ( I believe with Professor Thottethodi and (an)other TA(s) ) about changing our PSSC's from pointing at I2C to UART for communication with the Bluetooth module, as the bluetooth module found in the lab to use did not have I2C on its board. </p>
+							<hr/>
+							<p> Update: all libraries installed to the Pi, once the camera is calebrated we'll be able to start initial software design tests. </p>
+						</div>
+
+						<div class="content">
+							<header class="align-left">
+								<h2><b>Week 4: </b></h2>
+								<h1><b>Date:</b> January 31, 2019 </h1>
+								<h1><b>Total hours:</b> 12 </h2>
+								<h1><b>Description of Design Effors: </b></h1>
+							</header>
+							<p> 
+								The cold kept us from having lab, but I was able to put a good amount of work in all the same to streaming the taken pictures from the Pi to a WiFi/Ethernet connected device.
+							</p>
+							<p> 
+								<span class="image left four-show">
+									<img class="four-single-image" src="../../media/images/piFrameCaptures/frame6.jpg" alt="Pi Frame Capture"/>
+									<img class="four-single-image" src="../../media/images/piFrameCaptures/frame2.jpg" alt="Pi Frame Capture"/>
+									<img class="four-single-image" src="../../media/images/piFrameCaptures/frame5.jpg" alt="Pi Frame Capture"/>
+									<img class="four-single-image" src="../../media/images/piFrameCaptures/frame8.jpg" alt="Pi Frame Capture"/>
+								</span>
+								The big challenge from here was working with the code to get something that's able to be pulled into an application program, rather than a one-off run file. The examples found online, including one that involved threading and was very efficient, were messy, used global variables everywhere, and was resistive to being turned into classes and functions. And when they were, the extra structure interfered with the threading enough that the best I could find was 2 frames per second, slower than what we decided was useful.
+								So I switched back to a synchronous/non-threaded approach, and was able to easily get a little over our targeted 4fps even from an of campus connection. There's a small amount of work that'll be done to pull it into an application (making and sustaining connections and camera priming, to reduce wait times), but that's only a short way off now. 
+							</p>
+							<p> The frames are sideways cause that was the easiest way to prop the camera up for now, we'll have it mounted in the end product correctly. </p>
 						</div>
 					</div>
 				</div>
