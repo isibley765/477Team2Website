@@ -4310,3 +4310,14 @@
 			}
 
 		}
+
+/* User defined display edits */
+.four-show {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.four-single-image {
+	height: 50% !important;
+	width: 50% !important;
+}
