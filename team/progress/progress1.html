@@ -110,6 +110,32 @@
 								</p>
 
 							</div>
+							<div class="content">
+								<header class="align-left">
+									<span class="image right"><img src="../../media/images/em_w5_oscilliscope.JPG" alt=""/></span>
+									<h2><b>Week 5:</b></h2>
+									<h1><b>Date:</b> Febuary 8th, 2019 </h1>
+									<h1><b>Total hours:</b> 9 </h2>
+									<h1><b>Description of Design Effors: </b></h1>
+								</header>
+								<div>
+								<p>
+									This week I spent time researching packaging information for products similar to our project. There is a comparable Ring Doorbell that differes in function but
+									has an enclosure similar to our CAD design.
+								
+									I worked with Viktoryia to set up a driver for the alphanumeric keypad. After that, we turned our focus to configuring the MSP432 for UART. Although
+									the microcontroller supports UART, it it still rather tricky to setup and debug. Using the Keysight InfiniiVision MSO-X 3014T
+									Oscilliscope, I was able to track down the sample transfer data sent out by the microcontroller. The picture shwows the waveforms
+									on the oscilliscope, with the bottom blue lines indicating a byte transfer. The red error lines were for the receiving end of
+									UART which were not considered during this test setup.
+								
+								
+									Next week I plan on testing the receiving side of UART on our microcontroller and try and configure the HC-05 bluetooth module
+									for our targeted 9600 baud rate. If that is tested and working, we can start communicating with the Raspberry Pi and begin fleshing out our system.
+								</p>
+								</div>
+
+							</div>
 					</div>
 				</div>
 			</section>
