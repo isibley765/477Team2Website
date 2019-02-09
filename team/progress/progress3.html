@@ -103,6 +103,7 @@
 								The cold kept us from having lab, but I was able to put a good amount of work in all the same to streaming the taken pictures from the Pi to a WiFi/Ethernet connected device.
 							</p>
 							<p> 
+								<p style="margin: 0px">Frames from Pi Camera capturing</p>
 								<span class="image left four-show">
 									<img class="four-single-image" src="../../media/images/piFrameCaptures/frame6.jpg" alt="Pi Frame Capture"/>
 									<img class="four-single-image" src="../../media/images/piFrameCaptures/frame2.jpg" alt="Pi Frame Capture"/>
@@ -113,6 +114,35 @@
 								So I switched back to a synchronous/non-threaded approach, and was able to easily get a little over our targeted 4fps even from an of campus connection. There's a small amount of work that'll be done to pull it into an application (making and sustaining connections and camera priming, to reduce wait times), but that's only a short way off now. 
 							</p>
 							<p> The frames are sideways cause that was the easiest way to prop the camera up for now, we'll have it mounted in the end product correctly. </p>
+						</div>
+
+						<div class="content">
+							<header class="align-left">
+								<h2><b>Week 5: </b></h2>
+								<h1><b>Date:</b> February 8th, 2019 </h1>
+								<h1><b>Total hours:</b> 14 </h2>
+								<h1><b>Description of Design Effors: </b></h1>
+							</header>
+							<p> 
+								The cold kept us from having lab, but I was able to put a good amount of work in all the same to streaming the taken pictures from the Pi to a WiFi/Ethernet connected device.
+							</p>
+							<p style="margin: 0px">Successful image transmisions and result responses to and from the Pi</p>
+							<span class="image fit">
+								<img class="" src="../../media/images/piToCompToPiSuccess.png" alt="Pi Frame Capture"/>
+							</span>
+							<p> 
+								Did a lot of work this week trying to get the Pi to organize the streaming into an application-style file. Everything is centered around one application.py file, and it checks to make sure Python 3+ is used for uniformity. 
+								This runs both the Pi and the Computer/Server code, after checking the operating system, and the Computer was turned into the server in respect to the Socket connection again, since this makes much more sense in a functional flow design. 
+							</p>
+							<p>
+								FaceNet was effective, but turned out to be very terminal output and file reading/writing based, which slows down the computer processing segment significantly. Using the face_recognition library was a quick switch, and significantly faster. 
+								Pre-processing of the known images can happen before a user even initiates the image transfer, saving a large amount of time generating the feature vectors, saving pre-known feature vectors to files to be read and loaded in instead. All that's left is taking the images of the current user, finding the feature vectors from them, and comparing, and face_recognition provides an interface to do that process efficiently as well.
+								All together, the switch was easy, and the DLIB-based face_recognition library was both quicker and designed for application use much better than the facenet_recognition library. Accuracy has been spot on so far as well, even with small known user sets: only once or twice have I been slightly mistaken for Evan in the output results, and that was a magnitude or two of difference in the confidence value for identifying me, I was very obviously still the person found in the picture.
+							</p>
+							<p>
+								From there, a connection was just needed for sending the results down to the Pi. That took a bit of time, as the Socket library isn't terribly documented on the background functionality and took a good bit of trial and error on my part, but eventually a JSON packet of name: confidence values was able to be sent down to the Pi cleanly, as the picture shows.
+								From there, we'll need to get Bluetooth working to work on the next part of the application. The Micro will be the major step for that, as we'll need a way to test that we've got a stable connection, and to send/receive input from the connected device. We'll likely invest time in finding and connecting to a phone app that'll let us do similar work with the Pi and the microcontroller.
+							</p>
 						</div>
 					</div>
 				</div>
