@@ -1,3 +1,4 @@
 .DS_Store
-team/.DS_Store
-media/videos/we_love_todd.MOV
+team/.DS_Store*
+progress/.DS_Store*
+team/progress/.DS_Store*
