@@ -132,9 +132,33 @@
 
 										 <p>I also worked on the Mechanical Overview doccument where I compared the housing of the current products on the market with the Project
 										 Device that we are building. Me and Yash have also worked on the cad model of the housing that we created in SolidWorks. </p>
-										 <p>Finally, I keep maintaining the website to make sure it's up to date with all the documents and progress reports from every single Team
-										 member. </p>
-												</div>
+										 <p>Finally, I keep maintaining the website to make sure it's up to date with all the documents and progress reports from every single Team member.</p>
+											</div>
+
+											<div class="content">
+												<header class="align-left">
+													<h2><b>Week 6: </b></h2>
+													<h1><b>Date:</b> February 14th, 2019 </h1>
+													<h1><b>Total hours:</b> 25 </h2>
+													<h1><b>Description of Design Effors: </b></h1>
+												</header>
+												<p> So this week was mega productive. At first we were unable to get any meaningful data to be sent to and from the micro.
+													It was very frustrating. Multiple attempts of reading stuff with Oscilloscope were not successful. Days passed filled with
+													failures upon failures. But then I started attempting to connect to the Bluetooth Chip HC-05 with Raspberry Pi directly via
+													the supported Bluetooth protocol on Pi and the PyBluz module we used earlier (terrible API and documentation, by the way).
+													I was able to exculde the number of other different bluetooth modules in the room and find the one that belongs to our team.
+													Basically, I was able to narrow the pool of MAC addresses down from 4 to the one and only we need. After mapping the MAC address,
+													I started trying to send the data to the Bluetooth module and see how it would react. </p>
+													<span class="image right"><img src="../../media/images/We_Love_Todd.jpeg" alt=""/> <h1> Figure 6.1: Oscilloscope Output in UART Viewing Mode</h1></span>
+													<p> I had a lot of trouble figuring out the pace with which the characters are sent. First, they were really scarmbled so I knew that
+														the baudrate was correct, something else was wrong. So I ended up putting a physical delay in the Python Script between the packages
+														that are sent. I don't think it's a fault of the HC-05 chip, I believe it's PyBluz API that lacks functinality. </p>
+													<p> I was able to check the data that was sent through the Bluetooth protocol from Pi to HC-05 chip via Oscilloscope probe
+													connection in the UART debugging mode. It was a great success! (Figure 6.1) </p>
+													<p> Fortunately, it's not the end of the whole deal here. I was able to also configure the micro to get that data from HC-05
+													through the UART interface. So, now we have a fully functioning commuication line between the Pi, HC-05 and our micro.
+												And we are happier than ever :)</p>
+											</div>
 					</div>
 				</div>
 			</section>
