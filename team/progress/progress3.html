@@ -146,6 +146,34 @@
 								From there, we'll need to get Bluetooth working to work on the next part of the application. The Micro will be the major step for that, as we'll need a way to test that we've got a stable connection, and to send/receive input from the connected device. We'll likely invest time in finding and connecting to a phone app that'll let us do similar work with the Pi and the microcontroller.
 							</p>
 						</div>
+
+						<div class="content">
+							<header class="align-left">
+								<h2><b>Week 6: </b></h2>
+								<h1><b>Date:</b> February 15th, 2019 </h1>
+								<h1><b>Total hours:</b> 16 </h2>
+								<h1><b>Description of Design Effors: </b></h1>
+							</header>
+							<span class="image left">
+								<img class="" src="../../media/images/bluetooth/Dynamic_Bluetooth_FindAndSend.png" alt="Pi Bluetooth Code, simple and sweet"/>
+								<h1> Figure 6.1: Pi Bluetooth Code, simple and dynamic. Searches for the device of a desired name, and then tries to send a message to that address. This was used and verified to connect to the HC-05 bluetooth chip, with the MSP432 recieving the transmission over UART. </h1>
+							</span>
+							<p>
+								This week was mostly oriented to getting Bluetooth working, something we've had staged to start testing on the Pi but were bottlenecked on the MSP432 til we got UART communication debugged and working.
+								Todd was a good help, Viktoryia and Evan did most of the Microcontroller work, and I believe used the test UART signal from the Oscilloscope to help debug the receiving end of our UART process. Once we got that working, and communicating efficiently to the Bluetooth Chip, it was simple to get the Pi and Micro communicating.
+							</p>
+							<p>
+								The reason it worked so quickly was because the code and libraries I found for the Pi weeks ago and wasn't able to set up to test, happened to be very robust, simple to use, and worked pretty much off the bat once we had paired the HC-05 bluetooth chip with the Pi. That, was a refreshing discovery, though came late because debugging UART took a good amount of time.
+							</p>
+							<p>
+								In the meantime, I fought with several apps and even another Pi to try and get some sort of Bluetooth pairing working in the absence of the HC-05 being ready, in order to test Bluetooth. Long story short, since the Raspberry Pi lineage has only gained Bluetooth on-board since the Pi 3, support for it is still very young (and inconsistent), and Linux in general is awful at Bluetooth to start with.
+								I spent many hours being able to get the Pi either visible or paired with something else only when we were using the command-line <b>bluetoothctl</b> module. Despite the Python library Pybluez supposedly using the same or similar commands behind the scenes, while we could find the HC-05 easily once paired, I was unable to find another Pi or my Phone at any point other than when my phone was actively searching for a bluetooth device. And as soon as I left that screen in my phone's settings, the Pi was unable to find it again, and any connection was severed.
+								I was about to chase down one last rabbit hole involving terminal interactions with things relating to <b>rfcomm0</b> and other low-level Bluetooth interfacings in the file system, but then Viktoryia got the connection working, so I dropped it as it wasn't a useful pursuit, and I'd already poured 6+ hours into this discovery process.
+							</p>
+							<p>
+								The Pybluez Python library now works just fine, and I'm working on pulling it into the application software that we've already got running the facial recognition process. As long as that doesn't fight me, I'll be looking to verify that we're specifically running face identification off of the largest face in the image as well, which should be a small change from current.
+							</p>
+						</div>
 					</div>
 				</div>
 			</section>
