@@ -1,1 +1,4 @@
 .DS_Store
+team/.DS_Store*
+progress/.DS_Store*
+team/progress/.DS_Store*
