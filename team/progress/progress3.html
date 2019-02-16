@@ -61,7 +61,7 @@
 
 						<div class="content">
 							<header class="align-left">
-								<span class="image right"><img src="../../media/images/pi_image.jpg" alt="blurry pi image"/></span>
+								<span class="image right"><img src="../../media/images/pi_image.jpg" alt="blurry pi image"/><h1> Figure 2.1: Test Picture Taken with Pi Camera</h1></span>
 								<h2><b>Week 2: </b></h2>
 								<h1><b>Date:</b> January 18, 2019 </h1>
 								<h1><b>Total hours:</b> 20 </h2>
@@ -80,14 +80,14 @@
 								<h1><b>Description of Design Effors: </b></h1>
 							</header>
 							<p> We took a closer look at the software FaceNet and its documentation to complete the Software Overview. Inspection shows little documentation on how to use the network from within an application, however, besides activating it in a terminal setting and then presumably parsing its output text. </p>
-							<p>
-								<span class="image left"><img src="../../media/images/pi_remote_accessible.png" alt="setup pi for remote access"/></span>
-								To this end, face_recognition is a library that prides itself in its ease of use and accuracy, though its install process may also potentially be touchy as well. Once installed, it is directly documented to show how images can be classified against a pretrained network, also for a 128 feature vector like FaceNet. Less reference is made for how this architecture is built or what it is based on, but we have the full potential to make the actual algorithm process a modular item, so that we can design with whichever module appears easiest in initial stages, and swap for the other if desired, treating it as a black box that takes in cropped face images and returns the feature vector. </p>
-							<p> It has also been brought to our attention that a PyPi module <a style="color: blue" href="https://github.com/ishwarsawale/facenet_recognition">facenet_recognition</a> has been made for FaceNet with the intent for user convenience like with face_recognition, though it seems to still rely largely from physical files and folders. This isn't altogether a disadvantage, and may prove to be a good compromise  </p>
+
+								<span class="image left"><img src="../../media/images/pi_remote_accessible.png" alt="setup pi for remote access"/><h1> Figure 3.1: Setup for Remote Access in Lab</h1></span>
+								<p>To this end, face_recognition is a library that prides itself in its ease of use and accuracy, though its install process may also potentially be touchy as well. Once installed, it is directly documented to show how images can be classified against a pretrained network, also for a 128 feature vector like FaceNet. Less reference is made for how this architecture is built or what it is based on, but we have the full potential to make the actual algorithm process a modular item, so that we can design with whichever module appears easiest in initial stages, and swap for the other if desired, treating it as a black box that takes in cropped face images and returns the feature vector. </p>
+							<p> It has also been brought to our attention that a PyPi module <a style="color: blue" href="https://github.com/ishwarsawale/facenet_recognition">facenet_recognition</a> has been made for FaceNet with the intent for user convenience like with face_recognition, though it seems to still rely largely from physical files and folders. This isn't altogether a disadvantage, and may prove to be a good compromise. </p>
 							<p> Finally, it was discovered that the Raspberry Pi was able to be seen and connected outside of lab, as long as access to either Purdue WiFi was available or a Purdue VPN was used at home. So, this has been taken to great effect for lengthy installs of OpenCV, Tensorflow, and currently DLIB, though there have been some minor issues with DLIB. We will be trying again over the coming weekend, and but otherwise may be limited to doing the face cropping on the server side of things. Most Pi progress has been investment in the lengthier installs this week, usually when they don't work without extra care. </p>
-							<p>
-								<span class="image right"><img src="../../media/images/installs_finally_worked.png" alt="installs finally worked"/></span>
-								We also discussed ( I believe with Professor Thottethodi and (an)other TA(s) ) about changing our PSSC's from pointing at I2C to UART for communication with the Bluetooth module, as the bluetooth module found in the lab to use did not have I2C on its board. </p>
+
+								<span class="image right"><img src="../../media/images/installs_finally_worked.png" alt="installs finally worked"/><h1> Figure 3.2: Installs Finally Worked</h1></span>
+								<p>We also discussed ( I believe with Professor Thottethodi and (an)other TA(s) ) about changing our PSSC's from pointing at I2C to UART for communication with the Bluetooth module, as the bluetooth module found in the lab to use did not have I2C on its board. </p>
 							<hr/>
 							<p> Update: all libraries installed to the Pi, once the camera is calebrated we'll be able to start initial software design tests. </p>
 						</div>
@@ -99,19 +99,20 @@
 								<h1><b>Total hours:</b> 12 </h2>
 								<h1><b>Description of Design Effors: </b></h1>
 							</header>
-							<p> 
+							<p>
 								The cold kept us from having lab, but I was able to put a good amount of work in all the same to streaming the taken pictures from the Pi to a WiFi/Ethernet connected device.
 							</p>
-							<p> 
+							<p>
 								<p style="margin: 0px">Frames from Pi Camera capturing</p>
 								<span class="image left four-show">
 									<img class="four-single-image" src="../../media/images/piFrameCaptures/frame6.jpg" alt="Pi Frame Capture"/>
 									<img class="four-single-image" src="../../media/images/piFrameCaptures/frame2.jpg" alt="Pi Frame Capture"/>
 									<img class="four-single-image" src="../../media/images/piFrameCaptures/frame5.jpg" alt="Pi Frame Capture"/>
 									<img class="four-single-image" src="../../media/images/piFrameCaptures/frame8.jpg" alt="Pi Frame Capture"/>
+									<h1> Figure 4.1: Four Frame Captures from the Pi Camera</h1>
 								</span>
 								The big challenge from here was working with the code to get something that's able to be pulled into an application program, rather than a one-off run file. The examples found online, including one that involved threading and was very efficient, were messy, used global variables everywhere, and was resistive to being turned into classes and functions. And when they were, the extra structure interfered with the threading enough that the best I could find was 2 frames per second, slower than what we decided was useful.
-								So I switched back to a synchronous/non-threaded approach, and was able to easily get a little over our targeted 4fps even from an of campus connection. There's a small amount of work that'll be done to pull it into an application (making and sustaining connections and camera priming, to reduce wait times), but that's only a short way off now. 
+								So I switched back to a synchronous/non-threaded approach, and was able to easily get a little over our targeted 4fps even from an of campus connection. There's a small amount of work that'll be done to pull it into an application (making and sustaining connections and camera priming, to reduce wait times), but that's only a short way off now.
 							</p>
 							<p> The frames are sideways cause that was the easiest way to prop the camera up for now, we'll have it mounted in the end product correctly. </p>
 						</div>
@@ -123,25 +124,54 @@
 								<h1><b>Total hours:</b> 14 </h2>
 								<h1><b>Description of Design Effors: </b></h1>
 							</header>
-							<p> 
+							<p>
 								The cold kept us from having lab, but I was able to put a good amount of work in all the same to streaming the taken pictures from the Pi to a WiFi/Ethernet connected device.
 							</p>
 							<p style="margin: 0px">Successful image transmisions and result responses to and from the Pi</p>
 							<span class="image fit">
 								<img class="" src="../../media/images/piToCompToPiSuccess.png" alt="Pi Frame Capture"/>
+								<h1> Figure 5.1: Pi Frame Capture</h1>
 							</span>
-							<p> 
-								Did a lot of work this week trying to get the Pi to organize the streaming into an application-style file. Everything is centered around one application.py file, and it checks to make sure Python 3+ is used for uniformity. 
-								This runs both the Pi and the Computer/Server code, after checking the operating system, and the Computer was turned into the server in respect to the Socket connection again, since this makes much more sense in a functional flow design. 
+							<p>
+								Did a lot of work this week trying to get the Pi to organize the streaming into an application-style file. Everything is centered around one application.py file, and it checks to make sure Python 3+ is used for uniformity.
+								This runs both the Pi and the Computer/Server code, after checking the operating system, and the Computer was turned into the server in respect to the Socket connection again, since this makes much more sense in a functional flow design.
 							</p>
 							<p>
-								FaceNet was effective, but turned out to be very terminal output and file reading/writing based, which slows down the computer processing segment significantly. Using the face_recognition library was a quick switch, and significantly faster. 
+								FaceNet was effective, but turned out to be very terminal output and file reading/writing based, which slows down the computer processing segment significantly. Using the face_recognition library was a quick switch, and significantly faster.
 								Pre-processing of the known images can happen before a user even initiates the image transfer, saving a large amount of time generating the feature vectors, saving pre-known feature vectors to files to be read and loaded in instead. All that's left is taking the images of the current user, finding the feature vectors from them, and comparing, and face_recognition provides an interface to do that process efficiently as well.
 								All together, the switch was easy, and the DLIB-based face_recognition library was both quicker and designed for application use much better than the facenet_recognition library. Accuracy has been spot on so far as well, even with small known user sets: only once or twice have I been slightly mistaken for Evan in the output results, and that was a magnitude or two of difference in the confidence value for identifying me, I was very obviously still the person found in the picture.
 							</p>
 							<p>
 								From there, a connection was just needed for sending the results down to the Pi. That took a bit of time, as the Socket library isn't terribly documented on the background functionality and took a good bit of trial and error on my part, but eventually a JSON packet of name: confidence values was able to be sent down to the Pi cleanly, as the picture shows.
 								From there, we'll need to get Bluetooth working to work on the next part of the application. The Micro will be the major step for that, as we'll need a way to test that we've got a stable connection, and to send/receive input from the connected device. We'll likely invest time in finding and connecting to a phone app that'll let us do similar work with the Pi and the microcontroller.
+							</p>
+						</div>
+
+						<div class="content">
+							<header class="align-left">
+								<h2><b>Week 6: </b></h2>
+								<h1><b>Date:</b> February 15th, 2019 </h1>
+								<h1><b>Total hours:</b> 16 </h2>
+								<h1><b>Description of Design Effors: </b></h1>
+							</header>
+							<span class="image left">
+								<img class="" src="../../media/images/bluetooth/Dynamic_Bluetooth_FindAndSend.png" alt="Pi Bluetooth Code, simple and sweet"/>
+								<h1> Figure 6.1: Pi Bluetooth Code, simple and dynamic. Searches for the device of a desired name, and then tries to send a message to that address. This was used and verified to connect to the HC-05 bluetooth chip, with the MSP432 recieving the transmission over UART. </h1>
+							</span>
+							<p>
+								This week was mostly oriented to getting Bluetooth working, something we've had staged to start testing on the Pi but were bottlenecked on the MSP432 til we got UART communication debugged and working.
+								Todd was a good help, Viktoryia and Evan did most of the Microcontroller work, and I believe used the test UART signal from the Oscilloscope to help debug the receiving end of our UART process. Once we got that working, and communicating efficiently to the Bluetooth Chip, it was simple to get the Pi and Micro communicating.
+							</p>
+							<p>
+								The reason it worked so quickly was because the code and libraries I found for the Pi weeks ago and wasn't able to set up to test, happened to be very robust, simple to use, and worked pretty much off the bat once we had paired the HC-05 bluetooth chip with the Pi. That, was a refreshing discovery, though came late because debugging UART took a good amount of time.
+							</p>
+							<p>
+								In the meantime, I fought with several apps and even another Pi to try and get some sort of Bluetooth pairing working in the absence of the HC-05 being ready, in order to test Bluetooth. Long story short, since the Raspberry Pi lineage has only gained Bluetooth on-board since the Pi 3, support for it is still very young (and inconsistent), and Linux in general is awful at Bluetooth to start with.
+								I spent many hours being able to get the Pi either visible or paired with something else only when we were using the command-line <b>bluetoothctl</b> module. Despite the Python library Pybluez supposedly using the same or similar commands behind the scenes, while we could find the HC-05 easily once paired, I was unable to find another Pi or my Phone at any point other than when my phone was actively searching for a bluetooth device. And as soon as I left that screen in my phone's settings, the Pi was unable to find it again, and any connection was severed.
+								I was about to chase down one last rabbit hole involving terminal interactions with things relating to <b>rfcomm0</b> and other low-level Bluetooth interfacings in the file system, but then Viktoryia got the connection working, so I dropped it as it wasn't a useful pursuit, and I'd already poured 6+ hours into this discovery process.
+							</p>
+							<p>
+								The Pybluez Python library now works just fine, and I'm working on pulling it into the application software that we've already got running the facial recognition process. As long as that doesn't fight me, I'll be looking to verify that we're specifically running face identification off of the largest face in the image as well, which should be a small change from current.
 							</p>
 						</div>
 					</div>
