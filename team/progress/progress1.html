@@ -10,7 +10,12 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="../../assets/css/main.css" />
-	</head>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="../../assets/css/evans-page.css">
+
+
+	
 	<body class="subpage">
 
 		<!-- Header -->
@@ -48,111 +53,183 @@
 			</section>
 
 		<!-- Two -->
-			<section id="two" class="wrapper style2">
-				<div class="inner">
-					<div class="box">
-						<div class="content">
-							<header class="align-left">
-								<span class="image right"><img src="../../media/images/initial_team_pic.jpg" alt=""/><h1> Figure 1.1: Team Photo</h1></span>
-								<h2><b>Week 1:</b></h2>
-								<h1><b>Date:</b> January 11, 2019 </h1>
-								<h1><b>Total hours:</b> 8 </h2>
-								<h1><b>Description of Design Effors: </b></h1>
-							</header>
-							<p> Worked on the Final Project proposal and setting up meeting times based on everyone's schedule.</p>
-							<p>Developed a preliminary budget and researched microcontrollers, breakout boards, and sensors the project will use.</p>
-							<p></p>
-							</div>
-							<div class="content">
-								<header class="align-left">
-									<span class="image right"><img src="../../media/images/devboard.jpg" alt=""/><h1> Figure 2.1: Devboard MSP432</h1></span>
-									<h2><b>Week 2:</b></h2>
-									<h1><b>Date:</b> January 14, 2019 </h1>
-									<h1><b>Total hours:</b> 9 </h2>
-									<h1><b>Description of Design Effors: </b></h1>
-								</header>
-								<p>Working on setting up the development environment for the MSP432 microcontroller and documenting the process to do so.</p>
-								<p>Created a high level diagram with Ian outlining the main components and protocols for our project.</p>
-								<p>Changed the Admin password and made sure all team documents are organized on our shared drive.</p>
 
-
-							</div>
-							<div class="content">
-								<header class="align-left">
-									<span class="image right"><img src="../../media/images/CCS_Blinky.png" alt=""/><h1> Figure 3.1: Code Snippet Screenshot</h1></span>
-									<h2><b>Week 3:</b></h2>
-									<h1><b>Date:</b> January 25, 2019 </h1>
-									<h1><b>Total hours:</b> 12 </h2>
-									<h1><b>Description of Design Effors: </b></h1>
-								</header>
-								<p>Spent the first part of the week working on reasearching components for our Component Analysis assignment, specifically
-									our microcontroller and single board computer (Raspberry Pi). Worked with Viktoryia on an initial state transition
-									diagram for our microcontroller software required for the Software Overview assignment. Also worked with Viktoryia on
-									setting up the TI SDK and was able to run a code snippet to blink an on-board LED. Lastly, read over comments from our
-									last submission and made changes where needed.
-								</p>
-
-							</div>
-							<div class="content">
-								<header class="align-left">
-									<span class="image right"><img src="../../media/images/em_week4_img.jpg" alt=""/><h1> Figure 4.1: Devboard and Numpad Interfacing</h1></span>
-									<h2><b>Week 4:</b></h2>
-									<h1><b>Date:</b> Febuary 1st, 2019 </h1>
-									<h1><b>Total hours:</b> 9 </h2>
-									<h1><b>Description of Design Effors: </b></h1>
-								</header>
-								<p>This week I was responsible for the electrical overview assignment and spent a majority of my time looking at datasheets
-									and determining power requirements and standard protocols (UART, BLE). I was able to find a peripheral guide for our microcontroller that defines the Interrupt
-									Service Routines and other useful constants and funtions.
-									There was a specific example for configuring UART that we will use as a starting point.</p>
-									<p>Next, I plan on reviewing feedback on last weeks document and making changes based on TA feedback as well
-									as customizing some of the example code for the microcontroller.
-								</p>
-
-							</div>
-							<div class="content">
-								<header class="align-left">
-									<span class="image right"><img src="../../media/images/em_w5_oscilliscope.JPG" alt=""/><h1> Figure 5.1: UART Debugging Waves</h1></span>
-									<h2><b>Week 5:</b></h2>
-									<h1><b>Date:</b> Febuary 8th, 2019 </h1>
-									<h1><b>Total hours:</b> 9 </h2>
-									<h1><b>Description of Design Effors: </b></h1>
-								</header>
-								<div>
-								<p>
-									This week I spent time researching packaging information for products similar to our project. There is a comparable Ring Doorbell that differes in function but
-									has an enclosure similar to our CAD design.
-
-									I worked with Viktoryia to set up a driver for the alphanumeric keypad. After that, we turned our focus to configuring the MSP432 for UART. Although
-									the microcontroller supports UART, it it still rather tricky to setup and debug. Using the Keysight InfiniiVision MSO-X 3014T
-									Oscilliscope, I was able to track down the sample transfer data sent out by the microcontroller. The picture shwows the waveforms
-									on the oscilliscope, with the bottom blue lines indicating a byte transfer. The red error lines were for the receiving end of
-									UART which were not considered during this test setup.
-
-
-									Next week I plan on testing the receiving side of UART on our microcontroller and try and configure the HC-05 bluetooth module
-									for our targeted 9600 baud rate. If that is tested and working, we can start communicating with the Raspberry Pi and begin fleshing out our system.
-								</p>
-								</div>
-
-							</div>
-					</div>
+			
+				
+						
+		<div class = "container">
+            <br>
+ 
+			<div class="row">
+				
+				<div class="col-lg-7">
+					<h3><b>Week 1</b></h3>
+                    <hr>
+                    <p><b>Date</b>: January 11, 2019 </p>
+					<p><b>Total hours:</b> 8 </p>
+                    <p><b>Description of Design Efforts:</b> </p>
+                    <p>
+                    Working on setting up the development environment for the MSP432 microcontroller and documenting the process to do so.
+					Created a high level diagram with Ian outlining the main components and protocols for our project.
+					Changed the Admin password and made sure all team documents are organized on our shared drive.
 				</div>
-			</section>
+				<div class="col-lg-5">
+                        <img class="img-fluid" src="../../media/images/initial_team_pic.jpg" alt=""/>
+                        <p class="align-center"> <b> Fig 1. Team Picture </b> </p>			
+				</div>
+
+            </div>
+
+            <br>
+
+            <div class="row">
+                    <div class="col-lg-7">
+                        
+                        <h3><b>Week 2</b></h2>
+                        <hr>
+                        <p><b>Date:</b> January 14, 2019 </p>
+                        <p><b>Total hours:</b> 9 </p>
+                        <p><b>Description of Design Effors: </b></p>
+                    
+                    <p>Working on setting up the development environment for the MSP432 microcontroller and documenting the process to do so.</p>
+                    <p>Created a high level diagram with Ian outlining the main components and protocols for our project.</p>
+                    <p>Changed the Admin password and made sure all team documents are organized on our shared drive.</p>
+                    </div>
+                <div class="col-lg-5">
+                    <img class="img-fluid" src="../../media/images/devboard.jpg" alt=""/>
+                    <p class="align-center"> <b> Fig 2.1 MSP432P401R Development Board </b> </p>
+                </div>
+
+                </div>
+            <br>
 
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="container">
-					<ul class="icons">
-						<li><a href="https://github.com" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="mailto:mill1576@purdue.edu,isibley@purdue.edu,ynain@purdue.edu,vzhuleva@purdue.edu?subject=[ECE477]" class="icon fa-envelope-o"><span class="label">Email Us</span></a></li>
-					</ul>
-				</div>
-				<div class="copyright">
-					&copy; Hielo by TEMPLATED. All rights reserved.
-				</div>
-			</footer>
+			<div class="row">
+                
+				<div class="col-lg-7">
+                    <h3><b>Week 3</b></h3>
+                    <hr>
+					<h6><b>Date:</b> January 25, 2019 </h6>
+					<h6><b>Total hours:</b> 12 </h6>
+					<h6><b>Description of Design Effors: </b></h6>
+                    
+					<p>Spent the first part of the week working on reasearching components for our Component Analysis assignment, specifically
+						our microcontroller and single board computer (Raspberry Pi). Worked with Viktoryia on an initial state transition
+						diagram for our microcontroller software required for the Software Overview assignment. Also worked with Viktoryia on
+						setting up the TI SDK and was able to run a code snippet to blink an on-board LED. Lastly, read over comments from our
+						last submission and made changes where needed.
+                    </p>
+                    
+                </div>
+                <div class="col-lg-5">
+                        <img class="img-fluid " src="../../media/images/CCS_Blinky.png" alt=""/>
+                        <p class="align-center"> <b>Fig 3.1 CCS Editor</b> </p>	
+                        
+                </div>
+
+            </div>
+
+            
+            <br>
+
+            <div class="row">
+                <div class="col-lg-7">
+                    
+                    <h3><b>Week 4</b></h3>
+                    <hr>
+                    <p><b>Date:</b> Febuary 1st, 2019 </p>
+                    <p><b>Total hours:</b> 9 </p>
+                    <p><b>Description of Design Effors: </b></p>
+                
+                    <p>This week I was responsible for the electrical overview assignment and spent a majority of my time looking at datasheets
+                        and determining power requirements and standard protocols (UART, BLE). I was able to find a peripheral guide for our microcontroller that defines the Interrupt
+                        Service Routines and other useful constants and funtions.
+                        There was a specific example for configuring UART that we will use as a starting point.</p>
+                        <p>Next, I plan on reviewing feedback on last weeks document and making changes based on TA feedback as well
+                        as customizing some of the example code for the microcontroller.
+                    </p>
+                </div>
+                <div class="col-lg-5">
+                    <img class="img-fluid" src="../../media/images/em_week4_img.jpg" alt=""/>
+                    <p class="align-center"> <b>Fig 4.1 Keypad Prototyping </b> </p>
+                </div>
+    
+            </div>
+
+            
+            <br>
+
+            <div class="row">
+                    <div class="col-lg-7">
+  
+                        <h3><b>Week 5</b></h3>
+                        <hr>
+                        <p><b>Date:</b> Febuary 8th, 2019 </p>
+                        <p><b>Total hours:</b> 9 </p>
+                        <p><b>Description of Design Effors: </b></p>
+                        
+                        
+                        <p>
+                            This week I spent time researching packaging information for products similar to our project. There is a comparable Ring Doorbell that differes in function but
+                            has an enclosure similar to our CAD design.
+                        
+                            I worked with Viktoryia to set up a driver for the alphanumeric keypad. After that, we turned our focus to configuring the MSP432 for UART. Although
+                            the microcontroller supports UART, it it still rather tricky to setup and debug. Using the Keysight InfiniiVision MSO-X 3014T
+                            Oscilliscope, I was able to track down the sample transfer data sent out by the microcontroller. The picture shwows the waveforms
+                            on the oscilliscope, with the bottom blue lines indicating a byte transfer. The red error lines were for the receiving end of
+                            UART which were not considered during this test setup.
+                        
+                        
+                            Next week I plan on testing the receiving side of UART on our microcontroller and try and configure the HC-05 bluetooth module
+                            for our targeted 9600 baud rate. If that is tested and working, we can start communicating with the Raspberry Pi and begin fleshing out our system.
+                        </p>
+                    </div>
+                    <div class="col-lg-5">
+                        <img class="img-fluid align-middle" src="../../media/images/em_w5_oscilliscope.JPG" alt=""/>
+                        <p class="align-center"> <b>Fig 5.1 Debugging UART with Oscilliscope </b> </p>
+                    </div>
+                  
+    
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-lg-7">
+  
+                        <h3><b>Week 6</b></h3>
+                        <hr>
+                        <p><b>Date:</b> Febuary 15th, 2019 </p>
+                        <p><b>Total hours:</b> 8 </p>
+                        <p><b>Description of Design Effors: </b>
+                        </p>
+                        This week I was able to get the Hall effect sensor working on our bread board and show that the digitial output would 
+                        go from high to low when a magnet was close enough. I worked with Vikytoria on debugging UART and was able to show data being
+                        sent out from the micro using the oscilliscope's segmenting capabilities. The team was able to get the microcontroller, the
+                        bluetooth module, and the Raspberry Pi to communicate, and moving forward I will work on finalizing the embedded software for
+                        the microcontroller. 
+                        
+                        I put in a purchase order for the microcontroller and bluetooth module so those should be in next week. With our main components
+                        tested and communicating we can start making decisions on the system level. Next week I will be working on further testing the
+                        bluetooth connection and figuring out how to best use interrupts in our event driven system.
+                        
+                        <p>
+                            
+                        </p>
+                    </div>
+                    <div class="col-lg-5">
+                        <img class="img-fluid" src="../../media/images/Hall-effect.jpg" alt=""/>
+                        <p class="align-center"> <b>Fig 6.1 Hall effect Sensor </b> </p>
+                    </div>
+                  
+    
+                </div>
+
+
+
+					
+		</div>
+
+        
 
 		<!-- Scripts -->
 			<script src="../../assets/js/jquery.min.js"></script>
@@ -160,6 +237,14 @@
 			<script src="../../assets/js/skel.min.js"></script>
 			<script src="../../assets/js/util.js"></script>
 			<script src="../../assets/js/main.js"></script>
+
+			<!-- bootstrap scripts -->
+			<!-- Optional JavaScript -->
+			<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		
 
 	</body>
 </html>
