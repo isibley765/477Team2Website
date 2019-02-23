@@ -159,6 +159,27 @@
 													through the UART interface. So, now we have a fully functioning commuication line between the Pi, HC-05 and our micro.
 												And we are happier than ever :)</p>
 											</div>
+
+
+											<div class="content">
+												<header class="align-left">
+													<span class="image left"><img src="../../media/images/microBoot.png" alt=""/> <h1> Figure 7.1: Micro Console Output</h1></span>
+													<h2><b>Week 7: </b></h2>
+													<h1><b>Date:</b> February 22nd, 2019 </h1>
+													<h1><b>Total hours:</b> 18 </h2>
+													<h1><b>Description of Design Effors: </b></h1>
+												</header>
+												<p> This week I was focusing more on figuring out the Microcontroller - Raspberry Pi communication  in terms of what one needs
+												from the other. Me and Ian have talked throught the commuication patters that we are going to stick to throughout the development
+											process from now on. We agreed that the micro has to send the boot signal to the pi in order to indicate low power mode exit. Also we have
+										decided  that the  micro needs to know whether the server connection (where whole face recognition process happens) is lost in order to let
+									the user know that the only options now are Mechanical or Keypad overrides.</p>
+									<span class="image right"><img src="../../media/images/piBoot.png" alt=""/> <h1> Figure 7.2: Pi Console Output</h1></span>
+									<p> I got the boot message to send to the pi (Figure 7.1) and get the correct responce (Figure 7.2), now we need to figure out whether we need Threading or simple interrupts for our micro in order to interface
+									with the keypad and bluetooth chip at the same time. Me and Evan are going to be working on it further down the line as well. </p>
+									<p> Overall, stuff I did this week goes off of the things I have accomplished last week with the Bluetooth connection. To recap, right now
+									I am making the system come together and having proper commuication established between all the components. </p>
+											</div>
 					</div>
 				</div>
 			</section>
