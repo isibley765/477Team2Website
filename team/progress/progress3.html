@@ -193,6 +193,7 @@
 							<p>
 								The Raspberry Pi for now is going to initiate every message response from the Microcontroller, likely from user input to enable a testing enviroment. This is to allow for the development of the state machine structure within the micro and testing of the Pi dynamically as two separate pursuits, as they're being developed separately by Evan and Viktoryia, and myself.
 								Bluetooth currently isn't implemented into the application software due to some discussion and hashing out of message protocals, order of events, and general sequence planning between Viktoryia and myself, though some final thoughts were put into place this Friday and the changes into the application will hopefully be finished and testable, if not tested, through the weekend.
+								Losing the connection with the socket, however, has been tested semi-thoroughly, and made more dynamic than the last iteration, discarding the need to reconnect every time to the server over and over again. This speeds up the process by small but noticeable margins.
 							</p>
 							<p>
 								In addition, the finding of the cropped face was done and enforced through all aspects of our facial recognition processes, and was then tested through photos of the team previously found to miss the biggest face in the picture. A simple calculation of face area was made, using the bounding box's top, bottom, left and right borders as the estimates for the dimensions of the face.
