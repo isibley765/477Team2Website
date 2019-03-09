@@ -252,6 +252,61 @@
                   
     
                 </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-7">
+  
+                        <h3><b>Week 8</b></h3>
+                        <hr>
+                        <p><b>Date:</b> Febuary 28th, 2019 </p>
+                        <p><b>Total hours:</b> 9 </p>
+                        <p><b>Description of Design Effors: </b>
+                        </p>
+                        This week our team had our midterm design review. We had the first review slot and as such we spent the weekend preparing for our presentation.
+                        I worked on pulling information from our previous assignment submissions into our slides and was responsible for assigning slides for members of
+                        our team. Preparing for the presentation was pretty straight forward but still took time to organize everything into an informative and visually
+                        appealing display. 
+                        
+                        Outside of preparing for the presentation, I spent some time on working with the MSP432 timer module. I was able to find some functions in the API
+                        that will allow us to set off the timer interrupt at a predetermined period of time. The plan is to use this module to reset our system if there isn't 
+                        outside interaction after a specific time interval.
+
+                        This next week I plan on wrapping up the keypad driver and timer module and start making the overall system software. 
+                        <p>
+                            
+                        </p>
+                    </div>
+                    <div class="col-lg-5">
+                        <img class="img-thumbnail" src="../../media/images/keypad_wiring.png" alt=""/>
+                        <p class="align-center"> <b>Fig 7.1 Keypad rewiring on MSP432 </b> </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-7">
+      
+                            <h3><b>Week 9</b></h3>
+                            <hr>
+                            <p><b>Date:</b> Febuary 28th, 2019 </p>
+                            <p><b>Total hours:</b> 6 </p>
+                            <p><b>Description of Design Effors: </b>
+                            </p>
+                            This week I spent time working with the various MSP432 timer modules. We need a module uses a capture compare value for when
+                            a timeout occurs, which will be when the Raspberry Pi doesn't send a response in time or when the keypad is left unattended. For that
+                            I plan on using the Timer32 module which is a 32-bit count down timer at 3Mhz (SMCLK) that should be fast enough and allow us to set speicific timeout
+                            values. The other timer module will be the Timer A module. This timing module offers more flexibility and has an easy configuration.
+                            Next week (after spring break) I will integrate the Timer32 module with the uart module to track how long responses are taking and make sure that characters are 
+                            not being sent out too quickly. 
+                            <p>
+                                
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <img class="img-thumbnail" src="../../media/images/keypad_wiring.png" alt=""/>
+                            <p class="align-center"> <b>Fig 7.1 Keypad rewiring on MSP432 </b> </p>
+                        </div>
+                    </div>
+                  
+    
+                </div>
 
 
 
