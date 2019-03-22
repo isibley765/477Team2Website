@@ -278,8 +278,11 @@
                     </div>
                     <div class="col-lg-5">
                         <img class="img-thumbnail" src="../../media/images/keypad_wiring.png" alt=""/>
-                        <p class="align-center"> <b>Fig 7.1 Keypad rewiring on MSP432 </b> </p>
+                        <p class="align-center"> <b>Fig 8.1 Keypad rewiring on MSP432 </b> </p>
                     </div>
+
+                </div>
+                <br>
                     <div class="row">
                         <div class="col-lg-7">
       
@@ -300,8 +303,43 @@
                             </p>
                         </div>
                         <div class="col-lg-5">
-                            <img class="img-thumbnail" src="../../media/images/keypad_wiring.png" alt=""/>
-                            <p class="align-center"> <b>Fig 7.1 Keypad rewiring on MSP432 </b> </p>
+                            <img class="img-thumbnail" src="../../media/images/holdingUpKeypad.png" alt=""/>
+                            <p class="align-center"> <b>Fig 9.1 Keypad rewiring on MSP432 </b> </p>
+                        </div>
+                    </div>
+                
+                <br>
+                
+
+                    <div class="row">
+                        <div class="col-lg-7">
+      
+                            <h3><b>Week 11</b></h3>
+                            <hr>
+                            <p><b>Date:</b> March 21, 2019 </p>
+                            <p><b>Total hours:</b> 13 </p>
+                            <p><b>Description of Design Effors: </b>
+                            </p>
+                            This week I was responsible for the legal analysis of our product. As such, I spent a good amount of time looking into certifications our
+                            product would need in order to be marketed in the U.S. and Europe. This involved finding requirements for the FCC, RoHS and CE markings.
+                            Patents with designs or ideas similar to ours were already presented in our initial project proposal, but claims for each needed to be
+                            evaluated for the assignment. 
+                            
+                            I also spent time looking at the SysTick and Timer32 modules for the microcontroller. I found you could calculate time differences using
+                            SysTick functions which will be used to prevent keypad debouncing. I worked with Ian on connecting a GPIO pin to the Bluetooth module as a way 
+                            to check to see if the module had a valid connection. This will help with the logic of our overall system design.
+
+                            Next week I will integrate timers into the Bluetooth logic to make sure packets are sent out on time. I will plan on having the keypad worknig
+                            and stepping through a simple locking mechanism while checking for interrupts. Some time will be spent at debugging as we start integrating more
+                            and more components into the system.
+
+                            <p>
+                                
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <img class="img-thumbnail" src="../../media/images/bluetoothStatePin.png" alt=""/>
+                            <p class="align-center"> <b>Fig 10.1 Addition state pin (White wire) added to the Bluetooth module.</b> </p>
                         </div>
                     </div>
                   
