@@ -201,6 +201,28 @@
 								It's very possible this product may just need to come with a disclaimer on its instructions, or the packaging for the camera have a "Look here!" message to make it clear that the user's face needs to be clear and up front for the process.
 							</p>
 						</div>
+
+						<span class="image right thrty">
+							<h1> The code responsible for pulling Bluetooth messages. <i>getBlueMessage</i> gets input til it finds a newline terminating character, and <i>waitForBlueMessage</i> allows the current setup to wait til it finds the desired message, at least until the specified timeout is hit </h1>
+							<img src="../../media/images/bluetooth_pooling_and_query_code.png" alt="Pi Bluetooth Code"/>
+							
+						</span>
+						<div class="content">
+							<header class="align-left">
+								<h2><b>Week 9: </b></h2>
+								<h1><b>Date:</b> March 8th, 2019 </h1>
+								<h1><b>Total hours:</b> 14 </h2>
+								<h1><b>Description of Design Effors: </b></h1>
+							</header>
+							<p>
+								This week Viktoryia and I worked on getting the Bluetooth connection up and working, in the sense of the application. Messages from the HC-05 come through, but the characters come back jumbled up sometimes.
+								I'm leaning on Viktoryia's frequent sending to concatenate several transmissions together, and doing a search to find if the expected message is present. It's more limited, but it works right now.
+							</p>
+							<p>
+								This allows us to actually run the full application, which means we're getting closer to closing the system loops. That was our 'show me a thing' for this week, we gave an early view of it starting to work.
+								It was exciting to get a full look at the system running on its own like we're aiming for in the final design.
+							</p>
+						</div>
 					</div>
 				</div>
 			</section>
