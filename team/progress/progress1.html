@@ -237,19 +237,16 @@
                     <img class="img-thumbnail" src="../../media/images/keypad_wiring.png" alt=""/>
                     <p class="align-center"> <b>Fig 7.1 Keypad rewiring on MSP432 </b> </p>
                 </div>
-            </div>
-
-            <br>
-
-            <div class="row">
-                <div class="col-lg-7">
-
-                    <h3><b>Week 8</b></h3>
-                    <hr>
-                    <p><b>Date:</b> Febuary 28th, 2019 </p>
-                    <p><b>Total hours:</b> 9 </p>
-                    <p><b>Description of Design Effors: </b></p>
-                    <p>
+                <br>
+                <div class="row">
+                    <div class="col-lg-7">
+  
+                        <h3><b>Week 8</b></h3>
+                        <hr>
+                        <p><b>Date:</b> Febuary 28th, 2019 </p>
+                        <p><b>Total hours:</b> 9 </p>
+                        <p><b>Description of Design Effors: </b>
+                        </p>
                         This week our team had our midterm design review. We had the first review slot and as such we spent the weekend preparing for our presentation.
                         I worked on pulling information from our previous assignment submissions into our slides and was responsible for assigning slides for members of
                         our team. Preparing for the presentation was pretty straight forward but still took time to organize everything into an informative and visually
@@ -260,44 +257,80 @@
                         outside interaction after a specific time interval.
 
                         This next week I plan on wrapping up the keypad driver and timer module and start making the overall system software. 
-                    </p>
+                        <p>
+                            
+                        </p>
+                    </div>
+                    <div class="col-lg-5">
+                        <img class="img-thumbnail" src="../../media/images/keypad_wiring.png" alt=""/>
+                        <p class="align-center"> <b>Fig 8.1 Keypad rewiring on MSP432 </b> </p>
+                    </div>
+
                 </div>
-                <div class="col-lg-5">
-                    <img class="img-thumbnail" src="../../media/images/keypad_wiring.png" alt=""/>
-                    <p class="align-center"> <b>Fig 7.1 Keypad rewiring on MSP432 </b> </p>
-                </div>
-            </div>
+                <br>
+                    <div class="row">
+                        <div class="col-lg-7">
+      
+                            <h3><b>Week 9</b></h3>
+                            <hr>
+                            <p><b>Date:</b> Febuary 28th, 2019 </p>
+                            <p><b>Total hours:</b> 6 </p>
+                            <p><b>Description of Design Effors: </b>
+                            </p>
+                            This week I spent time working with the various MSP432 timer modules. We need a module uses a capture compare value for when
+                            a timeout occurs, which will be when the Raspberry Pi doesn't send a response in time or when the keypad is left unattended. For that
+                            I plan on using the Timer32 module which is a 32-bit count down timer at 3Mhz (SMCLK) that should be fast enough and allow us to set speicific timeout
+                            values. The other timer module will be the Timer A module. This timing module offers more flexibility and has an easy configuration.
+                            Next week (after spring break) I will integrate the Timer32 module with the uart module to track how long responses are taking and make sure that characters are 
+                            not being sent out too quickly. 
+                            <p>
+                                
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <img class="img-thumbnail" src="../../media/images/holdingUpKeypad.png" alt=""/>
+                            <p class="align-center"> <b>Fig 9.1 Keypad rewiring on MSP432 </b> </p>
+                        </div>
+                    </div>
+                
+                <br>
+                
 
-            <br>
+                    <div class="row">
+                        <div class="col-lg-7">
+      
+                            <h3><b>Week 11</b></h3>
+                            <hr>
+                            <p><b>Date:</b> March 21, 2019 </p>
+                            <p><b>Total hours:</b> 13 </p>
+                            <p><b>Description of Design Effors: </b>
+                            </p>
+                            This week I was responsible for the legal analysis of our product. As such, I spent a good amount of time looking into certifications our
+                            product would need in order to be marketed in the U.S. and Europe. This involved finding requirements for the FCC, RoHS and CE markings.
+                            Patents with designs or ideas similar to ours were already presented in our initial project proposal, but claims for each needed to be
+                            evaluated for the assignment. 
+                            
+                            I also spent time looking at the SysTick and Timer32 modules for the microcontroller. I found you could calculate time differences using
+                            SysTick functions which will be used to prevent keypad debouncing. I worked with Ian on connecting a GPIO pin to the Bluetooth module as a way 
+                            to check to see if the module had a valid connection. This will help with the logic of our overall system design.
 
-            <div class="row">
-                <div class="col-lg-7">
+                            Next week I will integrate timers into the Bluetooth logic to make sure packets are sent out on time. I will plan on having the keypad worknig
+                            and stepping through a simple locking mechanism while checking for interrupts. Some time will be spent at debugging as we start integrating more
+                            and more components into the system.
 
-                    <h3><b>Week 9</b></h3>
-                    <hr>
-                    <p><b>Date:</b> Febuary 28th, 2019 </p>
-                    <p><b>Total hours:</b> 6 </p>
-                    <p><b>Description of Design Effors: </b></p>
-                    <p>
-                        This week I spent time working with the various MSP432 timer modules. We need a module uses a capture compare value for when
-                        a timeout occurs, which will be when the Raspberry Pi doesn't send a response in time or when the keypad is left unattended. For that
-                        I plan on using the Timer32 module which is a 32-bit count down timer at 3Mhz (SMCLK) that should be fast enough and allow us to set speicific timeout
-                        values. The other timer module will be the Timer A module. This timing module offers more flexibility and has an easy configuration.
-                        Next week (after spring break) I will integrate the Timer32 module with the uart module to track how long responses are taking and make sure that characters are 
-                        not being sent out too quickly.
-                    </p>
-                </div>
-                <div class="col-lg-5">
-                    <img class="img-thumbnail" src="../../media/images/keypad_wiring.png" alt=""/>
-                    <p class="align-center"> <b>Fig 7.1 Keypad rewiring on MSP432 </b> </p>
-                </div>
-            </div>
-        </div>
-
-        <br>
-
-    </div>
-
+                            <p>
+                                
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <img class="img-thumbnail" src="../../media/images/bluetoothStatePin.png" alt=""/>
+                            <p class="align-center"> <b>Fig 10.1 Addition state pin (White wire) added to the Bluetooth module.</b> </p>
+                        </div>
+                    </div>
+                  
+    
+                </div>					
+		</div>
         
 
 		<!-- Scripts -->
