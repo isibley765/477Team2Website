@@ -4320,7 +4320,7 @@
 		}
 
 /* User defined display edits */
-.four-show {
+.mult-show {
 	display: flex;
 	flex-wrap: wrap;
 }
