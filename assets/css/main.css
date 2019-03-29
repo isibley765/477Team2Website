@@ -2335,6 +2335,14 @@
 			max-width: 40%;
 		}
 
+		.image.left.thrty, .image.right.thrty {
+			max-width: 30%;
+		}
+
+		.image.left.twnty, .image.right.twnty {
+			max-width: 20%;
+		}
+
 			.image.left img, .image.right img {
 				width: 100%;
 			}
