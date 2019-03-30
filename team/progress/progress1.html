@@ -342,6 +342,33 @@
                             <p class="align-center"> <b>Fig 10.1 Addition state pin (White wire) added to the Bluetooth module.</b> </p>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-lg-7">
+      
+                            <h3><b>Week 12</b></h3>
+                            <hr>
+                            <p><b>Date:</b> March 29, 2019 </p>
+                            <p><b>Total hours:</b> 8 </p>
+                            <p><b>Description of Design Effors: </b>
+                            </p>
+                            
+                            This week I was able to get the keypad working finally. Using the print function was slowing down the interrupt being triggered and removing this 
+                            eliminated latency on button pressed. The system tick module helped figure out what was taking the most time. Further, the rows and columns from each 
+                            key pressed was mapped to each correspinding key. With this working, functions are being mapped for certain keys such as initiating the face capturing sequence. 
+
+                            I am working on integrating this with the UART funcationality, and hopefully we will be able to press a button, scan a face, and unlock the pushbar
+                            in a correct sequence by the end of the week. I want to double check and make sure that UART is operating at the correct freqeucny and sending 
+                            correct data consistently. Next week I will wrap up most of the integration and begin debugging. 
+
+                            <p>
+                                
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <img class="img-thumbnail" src="../../media/images/bluetoothStatePin.png" alt=""/>
+                            <p class="align-center"> <b>Fig 10.1 Addition state pin (White wire) added to the Bluetooth module.</b> </p>
+                        </div>
+                    </div>
                   
     
                 </div>					
