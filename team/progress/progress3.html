@@ -228,13 +228,17 @@
 							<img style="width: 100%" src="../../media/images/PiMakingConnection.png" alt="Pi Bluetooth command line connection"/>
 							<img style="width: 100%; height: 50%;" src="../../media/images/MSP432_checking_bconnection.jpg" alt="MSP432 checking Bluetoot connection"/>
 							
-							<h1> Figure 9.1&9.2: Interaction between the MSP432 and the Raspberry Pi, with the new MSP432 code not initiating any bluetooth signals until a connection is registered. </h1>
+
+							<h1> Figure 11.1&11.2: Interaction between the MSP432 and the Raspberry Pi, with the new MSP432 code not initiating any bluetooth signals until a connection is registered. </h1>
+
 						</span>
 
 						<div class="content">
 							<header class="align-left">
 								<h2><b>Week 11: </b></h2>
-								<h1><b>Date:</b> March 8th, 2019 </h1>
+
+								<h1><b>Date:</b> March 21st, 2019 </h1>
+
 								<h1><b>Total hours:</b> 13 </h2>
 								<h1><b>Description of Design Effors: </b></h1>
 							</header>
@@ -246,6 +250,34 @@
 								I found it finally, it's the LED2 pin, or #32/PIO9 on the datasheet we have in lab, and it looks like we're going to just solder a wire to the MSP432 for now on our PCB (Yash claims it's not that difficult). I added it to the A12/P4.1 pin on the MSP432 to use in our process, and also to have an interrupt if need be later on, though the current plan isn't to use an interrupt.
 							</p>
 						</div>
+
+
+						<div class="content">
+							<header class="align-left">
+								<h2><b>Week 12: </b></h2>
+								<h1><b>Date:</b> March 29th, 2019 </h1>
+								<h1><b>Total hours:</b> 15 </h2>
+								<span class="image right">
+									<img class="" src="../../media/images/Comments_on_failure_points_from_Yash.jpg" alt="Pi Bluetooth Code, simple and sweet"/>
+									<h1> Figure 12.1: Helpful comments from the great and wonderful teammate Yash Nain </h1>
+								</span>
+								<h1><b>Description of Design Effors: </b></h1>
+							</header>
+							<p>
+								This week I largely worked on the document due tonight. Due to its heavy hardware nature, and my strong bias towards software in this project, I required a good bit of consulting from Yash to be able to get this done accurately, and decrypting the military handbook at first took a good while, though granted it was before we'd gone over anything in class about it.
+							</p>
+							<p>
+								We ran into some issue with our lab computer, as it <i><b>completely deleted our folder we were working in</b></i> and the latest save that had been made to GitHub was last Friday when I had committed the HC-05 state registering code. 
+								I dug through the computer extensively on both the normal and admin account trying to find the folder we'd been working in (that had been difficult to find before to start with), eventually searcing for key and specific files in the root directories of the different drives of both, but to no avail.
+								I was able to load the code from last week onto it, but that means all of our progress from this week is set back. Hopefully rewriting the code for the MSP432 isn't terribly difficult, since a lot of our work is trial and error, but it's still a setback that was disheartening to find and be helpless against.
+							</p>
+							<p>
+								I wasn't tuned in to our aparent policy for not logging out of the group account on the lab computer, so this was potentially a known issue by the rest of the team, but my lack of knowledge of it led to me logging out the other day as I wrapped something of my own up. 
+								Our new agreement, on top of not logging out of the computer now, is to make sure to commit and push to GitHub more religiously; we also cleared up Viktoryia's misconception that the micro code was still operating in a git folder that was broken, I had deleted the broken file and moved the relevant code into a completely functional folder. 
+								I did my best to tell the whole team that I'd gotten it working, but I think Yash and Evan were the only two I'd used it around, as Viktoryia and I don't commonly work on micro code together, and Yash was the only one there when I got it working in the new enviroment.
+							</p>
+						</div>
+
 					</div>
 				</div>
 			</section>
