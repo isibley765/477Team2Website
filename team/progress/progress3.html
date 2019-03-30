@@ -104,7 +104,7 @@
 							</p>
 							<p>
 								<p style="margin: 0px">Frames from Pi Camera capturing</p>
-								<span class="image left four-show">
+								<span class="image left mult-show">
 									<img class="four-single-image" src="../../media/images/piFrameCaptures/frame6.jpg" alt="Pi Frame Capture"/>
 									<img class="four-single-image" src="../../media/images/piFrameCaptures/frame2.jpg" alt="Pi Frame Capture"/>
 									<img class="four-single-image" src="../../media/images/piFrameCaptures/frame5.jpg" alt="Pi Frame Capture"/>
@@ -203,7 +203,7 @@
 						</div>
 
 						<span class="image right thrty">
-							<h1> The code responsible for pulling Bluetooth messages. <i>getBlueMessage</i> gets input til it finds a newline terminating character, and <i>waitForBlueMessage</i> allows the current setup to wait til it finds the desired message, at least until the specified timeout is hit </h1>
+							<h1> Figure 9.1: The code responsible for pulling Bluetooth messages. <i>getBlueMessage</i> gets input til it finds a newline terminating character, and <i>waitForBlueMessage</i> allows the current setup to wait til it finds the desired message, at least until the specified timeout is hit </h1>
 							<img src="../../media/images/bluetooth_pooling_and_query_code.png" alt="Pi Bluetooth Code"/>
 							
 						</span>
@@ -221,6 +221,29 @@
 							<p>
 								This allows us to actually run the full application, which means we're getting closer to closing the system loops. That was our 'show me a thing' for this week, we gave an early view of it starting to work.
 								It was exciting to get a full look at the system running on its own like we're aiming for in the final design.
+							</p>
+						</div>
+
+						<span class="image left mult-show">
+							<img style="width: 100%" src="../../media/images/PiMakingConnection.png" alt="Pi Bluetooth command line connection"/>
+							<img style="width: 100%; height: 50%;" src="../../media/images/MSP432_checking_bconnection.jpg" alt="MSP432 checking Bluetoot connection"/>
+							
+							<h1> Figure 9.1&9.2: Interaction between the MSP432 and the Raspberry Pi, with the new MSP432 code not initiating any bluetooth signals until a connection is registered. </h1>
+						</span>
+
+						<div class="content">
+							<header class="align-left">
+								<h2><b>Week 11: </b></h2>
+								<h1><b>Date:</b> March 8th, 2019 </h1>
+								<h1><b>Total hours:</b> 13 </h2>
+								<h1><b>Description of Design Effors: </b></h1>
+							</header>
+							<p>
+								Viktoryia and I traded off helping Yash with soldering, though some of the connectors were small in this first PCB iteration so he took over for the most part once that happened. Starting to populate our board and do unit tests now that those basic connections have been made, and Yash is going to increase the pad size for later iterations.
+							</p>
+							<p>
+								Once Yash focused down on the difficult soldering, I looked at the STATE pin for the HC-05 and tried to integrate it with the MSP432. The pin on the dev board for the chip works just fine, it goes high and low when there's a connection or none, respectively, but it was harder to find the pin on the non-breakout board module itself. 
+								I found it finally, it's the LED2 pin, or #32/PIO9 on the datasheet we have in lab, and it looks like we're going to just solder a wire to the MSP432 for now on our PCB (Yash claims it's not that difficult). I added it to the A12/P4.1 pin on the MSP432 to use in our process, and also to have an interrupt if need be later on, though the current plan isn't to use an interrupt.
 							</p>
 						</div>
 					</div>
