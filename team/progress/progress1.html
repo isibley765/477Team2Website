@@ -354,6 +354,36 @@
                             <p class="align-center"> <b>Fig 10.1 Addition state pin (White wire) added to the Bluetooth module.</b> </p>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-lg-7">
+      
+                            <h3><b>Week 13</b></h3>
+                            <hr>
+                            <p><b>Date:</b> April 4th, 2019 </p>
+                            <p><b>Total hours:</b> 10 </p>
+                            <p><b>Description of Design Effors: </b>
+                            </p>
+                            
+                            This week I worked on creating a state machine for the keypad that would allows locking and unlocking given a password
+                            and special keys. I made a 5 character password and was able to use GPIO to toggle LEDs to indicate different states. This 
+                            apparatus also used the timer to turn on LEDs for a certain period of time which is functionality that can be used for other
+                            aspects of testing in our project. I wrote functions mapping special keys (some the alphabetical keys) which will trigger 
+                            trigger a sequence to start facial recognition. By the end of this week we should be able to start the facial recognition 
+                            sequence and get a response from the Raspberry Pi.
+
+                            Next week I plan on integrating the keypad with the UART into our overall system algorithm and start testing different input scenarios.
+                            This will involve random button presses during other events, delayed responses from the Raspberry Pi, and other potential points
+                            of failure. I also plan on solidifying our software design to adhere to better software engineering practices, right now some of the 
+                            code base is more or less a hacked together solution and needs to be cleaned up.
+                            <p>
+                                
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <img class="img-thumbnail" src="../../media/images/bluetoothStatePin.png" alt=""/>
+                            <p class="align-center"> <b>Fig 10.1 Addition state pin (White wire) added to the Bluetooth module.</b> </p>
+                        </div>
+                    </div>
                   
     
                 </div>					
