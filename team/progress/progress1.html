@@ -387,6 +387,40 @@
                             <p class="align-center"> <b>Fig 13.1 Keypad Init code using the SysTick Module.</b> </p>
                         </div>
                     </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-7">
+      
+                            <h3><b>Week 14</b></h3>
+                            <hr>
+                            <p><b>Date:</b> April 12th, 2019 </p>
+                            <p><b>Total hours:</b> 8 </p>
+                            <p><b>Description of Design Effors: </b>
+                            </p>
+                                This week I spent some time digging through the MSP432 User Guide and Driver Library to find functions for verifying internal and
+                                external clock frequencies. The micro supports a 48MHz external oscillator and it might be more reliable than the internal ones. These 
+                                functions also verified that the subsystem clock was operating at 24Mhz which meant our UART module configuration was correct. I also ran
+                                into problems with the keypad, for whatever reason the keypad was not reading in pin values correctly. I ended up moving some of the pin
+                                connections on the breadboard and started getting reliable presses again.
+
+                            
+                            <p>
+                            <p>
+                                I also worked on cleaning up the code we had as it wasn't very cohesive. This involved creating new files for the LEDs and a Lock file that 
+                                abstracts the functionality of toggleing on GPIO and recording a sequences of button presses. This code is much easier to maintain and 
+                                debug and will hopefully be beneficial moving forward. Unfortunately we weren't able to program our PCB yet, but we should be able to
+                                figure it out in the next few days. Next week I will (hopefully) be debugging the code on our board. Everything seems to be coming together 
+                                rather quickly.  
+
+                            </p>
+                                
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <img class="img-thumbnail" src="../../media/images/pcb_magnifying_glass.jpg" alt=""/>
+                            <p class="align-center"> <b>Fig 14.1 Our PCB under a magnifying glass</b> </p>
+                        </div>
+                    </div>
                   
     
                 </div>					
