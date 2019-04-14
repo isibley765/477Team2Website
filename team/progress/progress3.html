@@ -228,13 +228,17 @@
 							<img style="width: 100%" src="../../media/images/PiMakingConnection.png" alt="Pi Bluetooth command line connection"/>
 							<img style="width: 100%; height: 50%;" src="../../media/images/MSP432_checking_bconnection.jpg" alt="MSP432 checking Bluetoot connection"/>
 							
+
 							<h1> Figure 11.1&11.2: Interaction between the MSP432 and the Raspberry Pi, with the new MSP432 code not initiating any bluetooth signals until a connection is registered. </h1>
+
 						</span>
 
 						<div class="content">
 							<header class="align-left">
 								<h2><b>Week 11: </b></h2>
+
 								<h1><b>Date:</b> March 21st, 2019 </h1>
+
 								<h1><b>Total hours:</b> 13 </h2>
 								<h1><b>Description of Design Effors: </b></h1>
 							</header>
@@ -246,6 +250,7 @@
 								I found it finally, it's the LED2 pin, or #32/PIO9 on the datasheet we have in lab, and it looks like we're going to just solder a wire to the MSP432 for now on our PCB (Yash claims it's not that difficult). I added it to the A12/P4.1 pin on the MSP432 to use in our process, and also to have an interrupt if need be later on, though the current plan isn't to use an interrupt.
 							</p>
 						</div>
+
 
 						<div class="content">
 							<header class="align-left">
@@ -272,6 +277,57 @@
 								I did my best to tell the whole team that I'd gotten it working, but I think Yash and Evan were the only two I'd used it around, as Viktoryia and I don't commonly work on micro code together, and Yash was the only one there when I got it working in the new enviroment.
 							</p>
 						</div>
+
+
+						<div class="content">
+							<span class="image left">
+								<img class="" src="../../media/images/cameraCaseFront.png" alt="Front Case CAD for the Pi Camera"/>
+								<h1> Figure 13.1: Doing some CAD to make some of the Product Enclosure for our design </h1>
+							</span>
+							<header class="align-left">
+								<h2><b>Week 13: </b></h2>
+								<h1><b>Date:</b> April 5th, 2019 </h1>
+								<h1><b>Total hours:</b> 14 </h2>
+								<h1><b>Description of Design Effors: </b></h1>
+							</header>
+							<p>
+								This week I helped interface with the Microcontroller, after sitting down on Monday with Evan and getting it working. We started a new project, got that working, and then slowly moved all of our code and references in til the new project worked.
+							</p>
+							<p>
+								Once the code was working, Viktoryia and I did some alignment with the Bluetooth process's flow again to catch up on the lost work, and added in a password protection capability. This is simple for now, but we plan on using encryption to protect transmissions over the air. 
+								I also made a Bluetooth-only copy of the application process, so Viktoryia could test the Micro without my being there and connecting the Pi to a "server" of some sort.
+							</p>
+							<p>
+								Finally, Yash and I have been working on the product housing, and I've been working on the CAD for the camera so far, and will be working on the Pi's case CAD after that's done, at least for version 1. I've also been talking with some ME friends about toleranes for general fitting, and also for screws, so hopefully this is going to be a closer fit to our components after their advice.
+							</p>
+						</div>
+
+
+						<span class="image right">
+							<img class="" src="../../media/images/piEnclosureCAD.png" alt="Raspberry Pi 3D case encosure"/>
+							<h1> Figure 14.1: Pi CAD for the 3D printed enclosure </h1>
+						</span>
+						<div class="content">
+							<header class="align-left">
+								<h2><b>Week 14: </b></h2>
+								<h1><b>Date:</b> April 12th, 2019 </h1>
+								<h1><b>Total hours:</b> 22 </h2>
+								<h1><b>Description of Design Effors: </b></h1>
+							</header>
+							<p>
+								This week we had issues with programming the microcontroller. Yash's mighty efforts this week to diagnose our issues programming the microcontroller were impressively successful, but for those I was mainly helpful as a wall to bounce ideas off of, and some of the diagnosing of issues from the coder software.
+							</p>
+							<p>
+								Since I was much less helpful on the micro/hardware end, my focuses continued to go to the modeling and 3D printing of our enclosures, and some basic preparation of our door for the final product's door assembly.
+								The door is ready to be hooked-up with a makeshift wall, though that addition will make it hard to store.
+							</p>
+							<p>
+								The Pi Camera and Raspberry Pi, however, have had models built thanks to the help of some 3D CAD models online, namely models of the Pi Camera and Raspberry Pi itself to aid in feature measurements and fitting-evaluations prior to printing.
+								The Pi Camera was successful, fitting well and even threading for the screws it was designed for on the first try (though we didn't have the right wood screws on hand, so that will need changing anyways).
+								The Raspberry Pi enclosure is currently printing at the writing of this progress report, though we'll be able to evaluate how it fits very soon, and if it works screwing into the door frame in addition to all the periferals native to the Pi itself.
+							</p>
+						</div>
+
 					</div>
 				</div>
 			</section>
