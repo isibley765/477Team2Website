@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="../../assets/css/evans-page.css">
 
 
-	
+
 	<body class="subpage">
 
 		<!-- Header -->
@@ -54,12 +54,12 @@
 
 		<!-- Two -->
 
-			
-				
-						
+
+
+
 		<div class = "container">
             <br>
- 
+
 			<div class="row">
 				<div class="col-lg-7">
 					<h3><b>Week 1</b></h3>
@@ -75,7 +75,7 @@
 				</div>
 				<div class="col-lg-5">
                         <img class="img-fluid" src="../../media/images/initial_team_pic.jpg" alt=""/>
-                        <p class="align-center"> <b> Fig 1. Team Picture </b> </p>			
+                        <p class="align-center"> <b> Fig 1. Team Picture </b> </p>
 				</div>
             </div>
 
@@ -83,13 +83,13 @@
 
             <div class="row">
                     <div class="col-lg-7">
-                        
+
                         <h3><b>Week 2</b></h2>
                         <hr>
                         <p><b>Date:</b> January 14, 2019 </p>
                         <p><b>Total hours:</b> 9 </p>
                         <p><b>Description of Design Effors: </b></p>
-                    
+
                     <p>Working on setting up the development environment for the MSP432 microcontroller and documenting the process to do so.</p>
                     <p>Created a high level diagram with Ian outlining the main components and protocols for our project.</p>
                     <p>Changed the Admin password and made sure all team documents are organized on our shared drive.</p>
@@ -109,7 +109,7 @@
 					<h6><b>Date:</b> January 25, 2019 </h6>
 					<h6><b>Total hours:</b> 12 </h6>
 					<h6><b>Description of Design Effors: </b></h6>
-                    
+
 					<p>
                         Spent the first part of the week working on reasearching components for our Component Analysis assignment, specifically
 						our microcontroller and single board computer (Raspberry Pi). Worked with Viktoryia on an initial state transition
@@ -117,15 +117,15 @@
 						setting up the TI SDK and was able to run a code snippet to blink an on-board LED. Lastly, read over comments from our
 						last submission and made changes where needed.
                     </p>
-                    
+
                 </div>
                 <div class="col-lg-5">
                         <img class="img-fluid " src="../../media/images/CCS_Blinky.png" alt=""/>
-                        <p class="align-center"> <b>Fig 3.1 CCS Editor</b> </p>	
-                        
+                        <p class="align-center"> <b>Fig 3.1 CCS Editor</b> </p>
+
                 </div>
             </div>
-            
+
             <br>
 
             <div class="row">
@@ -135,7 +135,7 @@
                     <p><b>Date:</b> Febuary 1st, 2019 </p>
                     <p><b>Total hours:</b> 9 </p>
                     <p><b>Description of Design Effors: </b></p>
-                
+
                     <p>
                         This week I was responsible for the electrical overview assignment and spent a majority of my time looking at datasheets
                         and determining power requirements and standard protocols (UART, BLE). I was able to find a peripheral guide for our microcontroller that defines the Interrupt
@@ -152,7 +152,7 @@
                     <p class="align-center"> <b>Fig 4.1 Keypad Prototyping </b> </p>
                 </div>
             </div>
-            
+
             <br>
 
             <div class="row">
@@ -166,14 +166,14 @@
                     <p>
                         This week I spent time researching packaging information for products similar to our project. There is a comparable Ring Doorbell that differes in function but
                         has an enclosure similar to our CAD design.
-                    
+
                         I worked with Viktoryia to set up a driver for the alphanumeric keypad. After that, we turned our focus to configuring the MSP432 for UART. Although
                         the microcontroller supports UART, it it still rather tricky to setup and debug. Using the Keysight InfiniiVision MSO-X 3014T
                         Oscilliscope, I was able to track down the sample transfer data sent out by the microcontroller. The picture shwows the waveforms
                         on the oscilliscope, with the bottom blue lines indicating a byte transfer. The red error lines were for the receiving end of
                         UART which were not considered during this test setup.
-                    
-                    
+
+
                         Next week I plan on testing the receiving side of UART on our microcontroller and try and configure the HC-05 bluetooth module
                         for our targeted 9600 baud rate. If that is tested and working, we can start communicating with the Raspberry Pi and begin fleshing out our system.
                     </p>
@@ -195,12 +195,12 @@
                     <p><b>Total hours:</b> 8 </p>
                     <p><b>Description of Design Effors: </b></p>
                     <p>
-                        This week I was able to get the Hall effect sensor working on our bread board and show that the digitial output would 
+                        This week I was able to get the Hall effect sensor working on our bread board and show that the digitial output would
                         go from high to low when a magnet was close enough. I worked with Vikytoria on debugging UART and was able to show data being
                         sent out from the micro using the oscilliscope's segmenting capabilities. The team was able to get the microcontroller, the
                         bluetooth module, and the Raspberry Pi to communicate, and moving forward I will work on finalizing the embedded software for
-                        the microcontroller. 
-                        
+                        the microcontroller.
+
                         I put in a purchase order for the microcontroller and bluetooth module so those should be in next week. With our main components
                         tested and communicating we can start making decisions on the system level. Next week I will be working on further testing the
                         bluetooth connection and figuring out how to best use interrupts in our event driven system.
@@ -224,11 +224,11 @@
                     <p><b>Description of Design Effors: </b></p>
                     <p>
                         This week I spent time re-working the keypad so it uses interrupts instead of polling. Also I spent time rewiring the connections
-                        so that all of the GPIO outputs are on one port and all of the outputs are on another. Additionally I helped Yash with the Software 
+                        so that all of the GPIO outputs are on one port and all of the outputs are on another. Additionally I helped Yash with the Software
                         Formalization assignment by describing the different software functions the micro will implement and what needs to be tested. We received
                         the first order of parts I ordered last week.
 
-                        Next week I plan on finishing up the keypad driver and start on writing the main system program. It will utilize all of the components we have 
+                        Next week I plan on finishing up the keypad driver and start on writing the main system program. It will utilize all of the components we have
                         interfaced so far (bluetooth module, keypad, Hall effect sensor). Our group has a midterm design review on Monday and I imagine preparing
                         for that most of the weekend.
                     </p>
@@ -241,7 +241,7 @@
                 <br>
                 <div class="row">
                     <div class="col-lg-7">
-  
+
                         <h3><b>Week 8</b></h3>
                         <hr>
                         <p><b>Date:</b> Febuary 28th, 2019 </p>
@@ -251,15 +251,15 @@
                         This week our team had our midterm design review. We had the first review slot and as such we spent the weekend preparing for our presentation.
                         I worked on pulling information from our previous assignment submissions into our slides and was responsible for assigning slides for members of
                         our team. Preparing for the presentation was pretty straight forward but still took time to organize everything into an informative and visually
-                        appealing display. 
-                        
+                        appealing display.
+
                         Outside of preparing for the presentation, I spent some time on working with the MSP432 timer module. I was able to find some functions in the API
-                        that will allow us to set off the timer interrupt at a predetermined period of time. The plan is to use this module to reset our system if there isn't 
+                        that will allow us to set off the timer interrupt at a predetermined period of time. The plan is to use this module to reset our system if there isn't
                         outside interaction after a specific time interval.
 
-                        This next week I plan on wrapping up the keypad driver and timer module and start making the overall system software. 
+                        This next week I plan on wrapping up the keypad driver and timer module and start making the overall system software.
                         <p>
-                            
+
                         </p>
                     </div>
                     <div class="col-lg-5">
@@ -271,7 +271,7 @@
                 <br>
                     <div class="row">
                         <div class="col-lg-7">
-      
+
                             <h3><b>Week 9</b></h3>
                             <hr>
                             <p><b>Date:</b> Febuary 28th, 2019 </p>
@@ -282,10 +282,10 @@
                             a timeout occurs, which will be when the Raspberry Pi doesn't send a response in time or when the keypad is left unattended. For that
                             I plan on using the Timer32 module which is a 32-bit count down timer at 3Mhz (SMCLK) that should be fast enough and allow us to set speicific timeout
                             values. The other timer module will be the Timer A module. This timing module offers more flexibility and has an easy configuration.
-                            Next week (after spring break) I will integrate the Timer32 module with the uart module to track how long responses are taking and make sure that characters are 
-                            not being sent out too quickly. 
+                            Next week (after spring break) I will integrate the Timer32 module with the uart module to track how long responses are taking and make sure that characters are
+                            not being sent out too quickly.
                             <p>
-                                
+
                             </p>
                         </div>
                         <div class="col-lg-5">
@@ -293,13 +293,13 @@
                             <p class="align-center"> <b>Fig 9.1 Keypad rewiring on MSP432 </b> </p>
                         </div>
                     </div>
-                
+
                 <br>
-                
+
 
                     <div class="row">
                         <div class="col-lg-7">
-      
+
                             <h3><b>Week 11</b></h3>
                             <hr>
                             <p><b>Date:</b> March 21, 2019 </p>
@@ -309,10 +309,10 @@
                             This week I was responsible for the legal analysis of our product. As such, I spent a good amount of time looking into certifications our
                             product would need in order to be marketed in the U.S. and Europe. This involved finding requirements for the FCC, RoHS and CE markings.
                             Patents with designs or ideas similar to ours were already presented in our initial project proposal, but claims for each needed to be
-                            evaluated for the assignment. 
-                            
+                            evaluated for the assignment.
+
                             I also spent time looking at the SysTick and Timer32 modules for the microcontroller. I found you could calculate time differences using
-                            SysTick functions which will be used to prevent keypad debouncing. I worked with Ian on connecting a GPIO pin to the Bluetooth module as a way 
+                            SysTick functions which will be used to prevent keypad debouncing. I worked with Ian on connecting a GPIO pin to the Bluetooth module as a way
                             to check to see if the module had a valid connection. This will help with the logic of our overall system design.
 
                             Next week I will integrate timers into the Bluetooth logic to make sure packets are sent out on time. I will plan on having the keypad worknig
@@ -320,7 +320,7 @@
                             and more components into the system.
 
                             <p>
-                                
+
                             </p>
                         </div>
                         <div class="col-lg-5">
@@ -331,29 +331,30 @@
                     <br>
                     <div class="row">
                         <div class="col-lg-7">
-      
+
                             <h3><b>Week 12</b></h3>
                             <hr>
                             <p><b>Date:</b> March 29, 2019 </p>
                             <p><b>Total hours:</b> 8 </p>
                             <p><b>Description of Design Effors: </b>
                             </p>
-                            
-                            This week I was able to get the keypad working finally. Using the print function was slowing down the interrupt being triggered and removing this 
-                            eliminated latency on button pressed. The system tick module helped figure out what was taking the most time. Further, the rows and columns from each 
-                            key pressed was mapped to each correspinding key. With this working, functions are being mapped for certain keys such as initiating the face capturing sequence. 
+
+                            This week I was able to get the keypad working finally. Using the print function was slowing down the interrupt being triggered and removing this
+                            eliminated latency on button pressed. The system tick module helped figure out what was taking the most time. Further, the rows and columns from each
+                            key pressed was mapped to each correspinding key. With this working, functions are being mapped for certain keys such as initiating the face capturing sequence.
 
                             I am working on integrating this with the UART funcationality, and hopefully we will be able to press a button, scan a face, and unlock the pushbar
-                            in a correct sequence by the end of the week. I want to double check and make sure that UART is operating at the correct freqeucny and sending 
-                            correct data consistently. Next week I will wrap up most of the integration and begin debugging. 
+                            in a correct sequence by the end of the week. I want to double check and make sure that UART is operating at the correct freqeucny and sending
+                            correct data consistently. Next week I will wrap up most of the integration and begin debugging.
 
                             <p>
-                                
+
                             </p>
                         </div>
                         <div class="col-lg-5">
                             <img class="img-thumbnail" src="../../media/images/keypad_code.jpg" alt=""/>
                             <p class="align-center"> <b>Fig 12.1 Keypad code for the SysTick module.</b> </p>
+
                         </div>
                     </div>
                     <br>
@@ -450,8 +451,9 @@
                   
     
                 </div>					
+
 		</div>
-        
+
 
 		<!-- Scripts -->
 			<script src="../../assets/js/jquery.min.js"></script>
@@ -466,7 +468,7 @@
 			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-		
+
 
 	</body>
 </html>
